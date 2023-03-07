@@ -8,6 +8,12 @@ Webで使えるピアノです
 
 ## 参考にしたページ
 
+HTML
+
+CSS
+
+JavaScript
+
 faviconついて
 
 
