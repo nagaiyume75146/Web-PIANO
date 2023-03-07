@@ -2,7 +2,7 @@
 
 Webで使えるピアノです
 
-## 参考にしたページ
+## 参考ページ
 
 デザイン:[Piano Menu](https://codepen.io/tatsuya/pen/MYXVyz)
 
