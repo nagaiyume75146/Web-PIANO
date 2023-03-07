@@ -20,14 +20,14 @@ font-family: 'EB Garamond', serif;
     --height-keyboard: calc( 100vh * calc( var(--height-base) / var(--height-size) ) ); /*height(300px)*/
 
     --width-key: calc( 100vw * calc( var(--width-base) / var(--width-size) ) ); /*width(1040px)*/
-    --height-key: calc( var(--height-keyboard)  * calc( 220 / var(--height-base) ) ); /*height(220px)*/
+    --height-key: calc( var(--height-keyboard) * calc( 220 / var(--height-base) ) ); /*height(220px)*/
 
-    --height-key: calc( var(--height-keyboard)  * calc( 218 / var(--height-base) ) ); /*height(220px)*/
+    --height-key: calc( var(--height-keyboard) * calc( 218 / var(--height-base) ) ); /*height(220px)*/
 
     --width-whiteKey: calc( calc( var(--width-key) * calc( 40 / var(--width-base) ) ) - 2px ); /*width(38px)*/
     --height-whiteKey: calc( var(--height-key) - 2px ); /*height(218px)*/
 
-    --height-baseNote: calc( var(--height-keyboard)  * calc( 40 / var(--height-base) ) ); /*height(40px)*/
+    --height-baseNote: calc( var(--height-keyboard) * calc( 40 / var(--height-base) ) ); /*height(40px)*/
 
     --height-whiteKey-active: calc( var(--height-key) - 10px ); /*height(216px)*/
 
