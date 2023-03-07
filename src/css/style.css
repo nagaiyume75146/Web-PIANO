@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+
+font-family: 'EB Garamond', serif;
+
 @font-face {
     font-family: Theano Didot;
     src: url(../font/theano-didot/TheanoDidot-Regular.ttf);
