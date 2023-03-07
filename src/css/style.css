@@ -3,19 +3,11 @@
     https://zenn.dev/web_tips/articles/f1167f4314dcb3
 */
 
+/*
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
 
 font-family: 'EB Garamond', serif;
-
-@font-face {
-    font-family: Theano Didot;
-    src: url(../font/theano-didot/TheanoDidot-Regular.ttf);
-}
-
-@font-face {
-    font-family: Cornelia Font Duo;
-    src: url(../font/cornelia-serif-demo/Cornelia\ -\ Serif\ Regular\ -\ DEMO.ttf);
-}
+*/
 
 :root {
     --width-base: 1040;
