@@ -16,5 +16,7 @@ JavaScript
 
 favicon
 
+licence
+
 
 
