@@ -14,7 +14,7 @@ CSS
 
 JavaScript
 
-faviconついて
+favicon
 
 
 
