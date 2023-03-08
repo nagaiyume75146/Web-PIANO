@@ -10,6 +10,25 @@
     src: url("../font/EB_Garamond/EBGaramond-VariableFont_wght.ttf");
 }
 
+:root {
+    --height: calc( calc( 100vh / 2 ) - 6px ); /*354px*/
+
+    --width-whiteKey: calc( 100vw * calc( 40 / 1280 ) ); /*40px*/
+    --height-whiteKey: calc( var(--height) * calc( 220 / 354 ) ); /*220px*/
+
+    --width-blackKey: calc( var(--width-whiteKey) * calc( 24 / 40 ) ); /*24px*/
+    --height-blackKey: calc( var(--height) * calc( 130 / 354 ) ); /*130px*/
+    --margin-blackKey: calc( var(--width-blackKey) / -2 ); /*-12px*/
+
+    --margin-blackKeyName: calc( var(--width-whiteKey) / 2 ); /*20px*/
+
+    --width-key: calc( var(--width-whiteKey) * 22 ); /*880px*/
+
+    --height-keyboard: calc( var(--height-whiteKey) + calc( var(--width-whiteKey) * 2 ) ); /*300px*/
+
+    --size-icon: calc( calc( var(--height) / 2 ) * calc( 50 / 177 ) ); /*50px*/
+}
+
 html {
     font-size: 62.5%; /*ベースを10pxにする*/
 }
@@ -52,8 +71,8 @@ body {
 }
 
 .icon {
-    width: 50px;
-    height: 50px;
+    width: var(--size-icon);
+    height: var(--size-icon);
     cursor: pointer;
 }
 
@@ -75,22 +94,22 @@ body {
 }
 
 .keyboard {
-    width: 880px;
-    height: 300px;
+    width: var(--width-key);
+    height: var(--height-keyboard);
 }
 
 .keyName {
     display: flex;
-    width: 880px;
-    height: 40px;
+    width: var(--width-key);
+    height: var(--width-whiteKey);
 }
 
 .whiteKeyName {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40px;
-    height: 40px;
+    width: var(--width-whiteKey);
+    height: var(--width-whiteKey);
     color: gold;
     font-size: 2rem;
     font-family: 'EB Garamond', serif;
@@ -101,9 +120,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40px;
-    height: 40px;
-    margin-left: 20px;
+    width: var(--width-whiteKey);
+    height: var(--width-whiteKey);
+    margin-left: var(--margin-blackKeyName);
     color: gold;
     font-size: 2rem;
     font-family: 'EB Garamond', serif;
@@ -114,8 +133,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40px;
-    height: 40px;
+    width: var(--width-whiteKey);
+    height: var(--width-whiteKey);
     color: gold;
     font-size: 2rem;
     font-family: 'EB Garamond', serif;
@@ -126,9 +145,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40px;
-    height: 40px;
-    margin-right: 20px;
+    width: var(--width-whiteKey);
+    height: var(--width-whiteKey);
+    margin-right: var(--margin-blackKeyName);
     color: gold;
     font-size: 2rem;
     font-family: 'EB Garamond', serif;
@@ -137,15 +156,14 @@ body {
 
 .key {
     display: flex;
-    width: 880px;
-    height: 220px;
-    background: blue;
+    width: var(--width-key);
+    height: var(--height-whiteKey);
 }
 
 .whiteKey {
     position: relative;
-    width: 40px;
-    height: 220px;
+    width: var(--width-whiteKey);
+    height: var(--height-whiteKey);
     padding: 0;
     border:solid 1px #ccc;
     border-radius:0 0 3px 3px; 
@@ -158,9 +176,9 @@ body {
 .blackKey {
     position:relative;
     z-index: 1;
-    width: 24px;
-    height: 130px;
-    margin: 0 -12px;
+    width: var(--width-blackKey);
+    height: var(--height-blackKey);
+    margin: 0 var(--margin-blackKey);
     border-width:1px 2px 7px;
     border-style:solid;
     border-color:#666 #222 #111 #555; 
@@ -177,8 +195,8 @@ span {
     align-items: center;
     position: absolute;
     bottom: 0;
-    width: 40px;
-    height: 40px;
+    width: var(--width-whiteKey);
+    height: var(--width-whiteKey);
     font-size: 2rem;
     font-family: 'EB Garamond', serif;
 }
