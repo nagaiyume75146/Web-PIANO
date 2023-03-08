@@ -71,6 +71,15 @@ body {
     background: blue;
 }
 
+.volume-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: calc( 100% / 2 );
+    background: blue;
+}
+
 .bottom {
     display: flex;
     justify-content: center;
