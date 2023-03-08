@@ -10,12 +10,6 @@
     src: url("../font/EB_Garamond/EBGaramond-VariableFont_wght.ttf");
 }
 
-:root {
-    --height-back: calc( ( 100vh / 2 ) - 6px );
-
-    /*--height-whiteKey: calc( var(--height-back) *  ( 220 / var(--height-back) ) );*/
-}
-
 html {
     font-size: 62.5%; /*ベースを10pxにする*/
 }
@@ -27,7 +21,7 @@ body {
 
 .top {
     width: 100vw;
-    height: var(--height-back);
+    height: calc( ( 100vh / 2 ) - 6px );
     border-right: solid 2px #333;
     border-bottom: solid 2px #333;
     border-left: solid 2px #333;
@@ -68,7 +62,7 @@ body {
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: var(--height-back);
+    height: calc( ( 100vh / 2 ) - 6px );
     margin-top: 5px;
     border-right: solid 2px #333;
     border-bottom: solid 2px #333;
