@@ -49,74 +49,18 @@ body {
     user-select: none;
 }
 
-.icon-block {
-    display: flex;
-    position: absolute;
-    right: 0;
-    top: 5px;
-    width: 150px;
-    height: 50px;
-}
-
-.icon {
-    margin-right: 25px;
-    width: 50px;
-    height: 50px;
-}
-
-.volume {
+.icon-back {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     width: 100%;
     height: calc( 100% / 2 );
 }
 
-.volume-block {
-    display: flex;
-    width: 600px;
-    height: 75px;
-}
-
-.volume-icon {
-    width: 75px;
-    height: 75px;
-}
-
-.volume-number {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 75px;
-    height: 75px;
-    color: gold;
-    font-size: 3rem;
-    font-family: 'EB Garamond', serif;
-    user-select: none;
-}
-
-.volume-slider {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 450px;
-    height: 75px;
-}
-
-.volume-var {
-    width: 100%;
-    height: 5px;
-    background: gold;
-}
-
-.volume-knob {
-    position: relative;
-    bottom: 5px;
-    width: 15px;
-    height: 15px;
-    border-radius: 7.5px;
-    background: #666;
+.icon {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
 }
 
 .bottom {
