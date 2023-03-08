@@ -1,78 +1,115 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>PIANO</title>
-        <link rel="icon" type="image/x-icon" href="src/favicon/favicon.ico">
         <meta http-equiv="Content-Language" content="ja">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <!--title-->
+        <title>PIANO</title>
         <!--CSS-->
         <link rel="tylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
         <link rel="stylesheet" href="src/css/style.css">
         <!--favicon-->
+        <link rel="icon" type="image/x-icon" href="src/favicon/favicon.ico">
     </head>
-    <body class="piano">
+    <body>
 
         <div class="top">
-            <div class="title">PIANO</div>
-        </div>
-        <div class="keyboard">
-            <div class="keyName">
-                <span class="blackKeyName-left"  >T2</span>
-                <span class="blackKeyName-middle">Y2</span>
-                <span class="blackKeyName-right" >U2</span>
-                <span class="blackKeyName-left"  >a</span>
-                <span class="blackKeyName-right" ></span>
-                <span class="blackKeyName-left"  >T2</span>
-                <span class="blackKeyName-middle">Y2</span>
-                <span class="blackKeyName-right" >U2</span>
-                <span class="blackKeyName-left"  >W3</span>
-                <span class="blackKeyName-right" >E3</span>
-                <span class="blackKeyName-left"  >T3</span>
-                <span class="blackKeyName-middle">Y3</span>
-                <span class="blackKeyName-right" >U3</span>
-                <span class="blackKeyName-left"  >W4</span>
-                <span class="blackKeyName-right" >E4</span>
-                <span class="blackKeyName-left"  >T4</span>
-                <span class="blackKeyName-middle">Y4</span>
-                <span class="blackKeyName-right" >U4</span>
-                <span class="blackKeyName-left"  >W5</span>
-                <span class="blackKeyName-right" >E5</span>
-            </div>
-            <div class="key">
-                <div class="whiteKey" id="A1"  ></div>
-                <div class="blackKey" id="B♭1"></div>
-                <div class="whiteKey" id="B1"  ></div>
-                <div class="whiteKey" id="C1"  ></div>
-                <div class="blackKey" id="D♭1"></div>
-                <div class="whiteKey" id="D1"  ></div>
-                <div class="blackKey" id="E♭1"></div>
-                <div class="whiteKey" id="E1"  ></div>
-                <div class="whiteKey" id="F1"  ></div>
-                <div class="blackKey" id="G♭1"></div>
-                <div class="whiteKey" id="G1"  ></div>
-                <div class="blackKey" id="A♭1"></div>
-                <div class="whiteKey" id="A1"  ></div>
-                <div class="blackKey" id="B♭1"></div>
-                <div class="whiteKey" id="B1"  ></div>
-                <div class="whiteKey" id="C2"  >
-                    <span class="base">C4</span>
-                </div>
-                <div class="blackKey" id="D♭2"></div>
-                <div class="whiteKey" id="D2"  ></div>
-                <div class="blackKey" id="E♭2"></div>
-                <div class="whiteKey" id="E2"  ></div>
-                <div class="whiteKey" id="F2"  ></div>
-                <div class="blackKey" id="G♭2"></div>
-                <div class="whiteKey" id="G2"  ></div>
-                <div class="blackKey" id="A♭2"></div>
-                <div class="whiteKey" id="A2"  ></div>
-                <div class="blackKey" id="B♭2"></div>
-                <div class="whiteKey" id="B2"  ></div>
-                <div class="whiteKey" id="C1"  ></div>
+            <div class="title">Web-PIANO</div>
+            <div class="setting">
+                <div class="icon-block"></div>
+                <div class="volume-block"></div>
             </div>
         </div>
 
+        <div class="bottom">
+            <div class="keyboard">
+                <div class="keyName">
+                    <div class="blackKeyName-left"  >2</div>
+                    <div class="blackKeyName-right" >3</div>
+                    <div class="blackKeyName-left"  >5</div>
+                    <div class="blackKeyName-middle">6</div>
+                    <div class="blackKeyName-right" >7</div>
+                    <div class="blackKeyName-left"  >9</div>
+                    <div class="blackKeyName-right" >0</div>
+                    <div class="blackKeyName-left"  >^</div>
+                    <div class="blackKeyName-middle">a</div>
+                    <div class="blackKeyName-right" >s</div>
+                    <div class="blackKeyName-left"  >f</div>
+                    <div class="blackKeyName-right" >g</div>
+                    <div class="blackKeyName-left"  >j</div>
+                    <div class="blackKeyName-middle">k</div>
+                    <div class="blackKeyName-right" >l</div>
+                </div>
+                <div class="key">
+                    <div class="whiteKey"></div>
+                    <div class="blackKey"></div>
+                    <div class="whiteKey"></div>
+                    <div class="blackKey"></div>
+                    <div class="whiteKey"></div>
+                    <div class="whiteKey"></div>
+                    <div class="blackKey"></div>
+                    <div class="whiteKey"></div>
+                    <div class="blackKey"></div>
+                    <div class="whiteKey"></div>
+                    <div class="blackKey"></div>
+                    <div class="whiteKey"></div>
+                    <div class="whiteKey">
+                        <span>C4</span>
+                    </div>
+                    <div class="blackKey"></div>
+                    <div class="whiteKey"></div>
+                    <div class="blackKey"></div>
+                    <div class="whiteKey"></div>
+                    <div class="whiteKey"></div>
+                    <div class="blackKey"></div>
+                    <div class="whiteKey"></div>
+                    <div class="blackKey"></div>
+                    <div class="whiteKey"></div>
+                    <div class="blackKey"></div>
+                    <div class="whiteKey"></div>
+                    <div class="whiteKey"></div>
+                    <div class="blackKey"></div>
+                    <div class="whiteKey"></div>
+                    <div class="blackKey"></div>
+                    <div class="whiteKey"></div>
+                    <div class="whiteKey"></div>
+                    <div class="blackKey"></div>
+                    <div class="whiteKey"></div>
+                    <div class="blackKey"></div>
+                    <div class="whiteKey"></div>
+                    <div class="blackKey"></div>
+                    <div class="whiteKey"></div>
+                    <div class="whiteKey"></div>
+                </div>
+                <div class="keyName">
+                    <div class="whiteKeyName">q</div>
+                    <div class="whiteKeyName">w</div>
+                    <div class="whiteKeyName">e</div>
+                    <div class="whiteKeyName">r</div>
+                    <div class="whiteKeyName">t</div>
+                    <div class="whiteKeyName">y</div>
+                    <div class="whiteKeyName">u</div>
+                    <div class="whiteKeyName">i</div>
+                    <div class="whiteKeyName">o</div>
+                    <div class="whiteKeyName">p</div>
+                    <div class="whiteKeyName">@</div>
+                    <div class="whiteKeyName">[</div>
+                    <div class="whiteKeyName">z</div>
+                    <div class="whiteKeyName">x</div>
+                    <div class="whiteKeyName">c</div>
+                    <div class="whiteKeyName">v</div>
+                    <div class="whiteKeyName">b</div>
+                    <div class="whiteKeyName">n</div>
+                    <div class="whiteKeyName">m</div>
+                    <div class="whiteKeyName">,</div>
+                    <div class="whiteKeyName">.</div>
+                    <div class="whiteKeyName">/</div>
+                </div>
+            </div>
+        </div>
+
+        <!--JavaScript-->
         <script src="src/javascript/script.js"></script>
     </body>
 </html>

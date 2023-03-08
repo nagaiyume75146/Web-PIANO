@@ -14,92 +14,29 @@
 */
 
 :root {
-    --width-base: 1040;
-    --height-base: 300;
+    --height-back: calc( ( 100vh / 2 ) - 6px );
 
-    --width-size: 1280;
-    --height-size: 720; 
-
-    --width-keyboard: calc( 100vw - 4px ); /*width(1276px)*/
-    --height-keyboard: calc( 100vh * calc( var(--height-base) / var(--height-size) ) ); /*height(300px)*/
-
-    --width-key: calc( 100vw * calc( var(--width-base) / var(--width-size) ) ); /*width(1040px)*/
-    --height-key: calc( var(--height-keyboard) * calc( 220 / var(--height-base) ) ); /*height(220px)*/
-
-    --height-key: calc( var(--height-keyboard) * calc( 218 / var(--height-base) ) ); /*height(220px)*/
-
-    --width-whiteKey: calc( calc( var(--width-key) * calc( 40 / var(--width-base) ) ) - 2px ); /*width(38px)*/
-    --height-whiteKey: calc( var(--height-key) - 2px ); /*height(218px)*/
-
-    --height-baseNote: calc( var(--height-keyboard) * calc( 40 / var(--height-base) ) ); /*height(40px)*/
-
-    --height-whiteKey-active: calc( var(--height-key) - 10px ); /*height(216px)*/
-
-    --width-blackKey: calc( calc( var(--width-key) * calc( 24 / var(--width-base) ) ) - 4px ); /*width(20px)*/
-    --height-blackKey: calc( var(--height-keyboard) * calc( 122 / var(--height-base) ) ); /*height(122px)*/
-    --margin-blackKey: calc( calc( var(--width-blackKey) + 4px ) / -2 ); /*margin(-12px)*/
-
-
-    --height-blackKey-active: calc( var(--height-keyboard) * calc( 126 / var(--height-base) ) ); /*height(124px)*/
-
-    --width-keyName: calc( var(--width-key) * calc( 40 / var(--width-base) ) ); /*width(40px)*/
-    --height-keyName: calc( var(--height-keyboard) * calc( 40 / var(--height-base) ) ); /*height(40px)*/
-    --margin-blackKeyName: calc( var(--width-keyName) / 2 ); /*margin(20px)*/
-
-    --height-top: calc( 100vh - calc( calc( var(--height-keyboard) + 11px ) * 2 ) ); /*height(98px)*/
-
-    --width-title: calc( var(--width-keyboard) * calc( 476 / 1276 ) ); /*width(476px)*/
-
-    --width-volume: calc( var(--width-keyboard) * calc( 400 / 1276 ) ); /*width(400px)*/
-
-    --width-volume-group: calc( var(--width-keyboard) * calc( 50 / 1276 ) ); /*width(50px)*/
-    --height-volume-group: calc( var(--height-top) * calc( 70 / 98 ) ); /*height(70px)*/
-
-    --height-volume-button: calc( var(--height-top) * calc( 50/ 98 ) ); /*height(49px)*/
-
-    --width-volume-slider-container: calc( var(--width-keyboard) * calc( 250  / 1276 ) ); /*width(250px)*/
-    --margin-volume-slider-container: calc( var(--width-keyboard) * calc( 10  / 1276 ) ); /*margin(10px)*/
-
-    --height-volume-var: calc( var(--height-top) * calc( 10 / 98 ) ); /*height(10px)*/
-
-    --size-volume-thumb: calc( var(--height-top) * calc( 20 / 98 ) ); /*height(20px)*/
-
-    --height-volume-key: calc( var(--height-top) * calc( 20 / 98 ) ); /*height(20px)*/
-
-    --color-gold-light: #9f8f3e;
-    --color-gold-dark: #746a38;
-    --color-gray-light: #9e9e9e;
-    --color-gray-light-hover: #676767;
-    --color-gray-dark: #484848;
-    --color-gray-dark-hover: #000000;
-
-    --fontSize-title: 5rem; /*50px*/
-    --fontSize-volume-value: 3rem; /*30px*/
-    --fontSize-key: 1.5rem; /*15px*/
-    --fontSize-keyName: 2.5rem; /*25px*/
-    
-    --fontFamily-top: Theano Didot,"sans-serif";
-    --fontFamily-keyName: Cornelia Font Duo,"sans-serif";
+    /*--height-whiteKey: calc( var(--height-back) *  ( 220 / var(--height-back) ) );*/
 }
 
 html {
     font-size: 62.5%; /*ベースを10pxにする*/
 }
 
-.piano {
+body {
     margin: 0;
     overflow: hidden;
 }
 
 .top {
-    display: flex;
-    width: var(--width-keyboard);
-    height: var(--height-top);
+    width: 100vw;
+    height: var(--height-back);
     border-right: solid 2px #333;
     border-bottom: solid 2px #333;
     border-left: solid 2px #333;
     border-radius:0 0 5px 5px; 
     box-shadow:0 2px 0px #666,0 3px 0px #555,0 4px 0px #444,0 6px 6px #000,inset 0 -1px 1px rgba(255,255,255,0.5),inset 0 -4px 5px #000;
+    box-sizing: border-box;
     background:-webkit-linear-gradient(-60deg,#000,#333,#000,#333 75%);
 }
 
@@ -107,53 +44,70 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: var(--width-title);
-    height: var(--height-top);
-    margin: 0 0 0 var(--width-volume);
-    color: var(--color-gold-light);
-    font-size: var(--fontSize-title);
-    font-family: var(--fontFamily-top);
+    width: 100%;
+    height: calc( 100% / 2 );
+    background: red;
+    color: gold;
+    font-size:80px;
+    /*font-family: var(--fontFamily-top);*/
     user-select: none;
 }
 
-.keyboard {
+.setting {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    width: var(--width-keyboard);
-    height: var(--height-keyboard);
+    align-items: center;
+    width: 100%;
+    height: calc( 100% / 2 );
+    background: blue;
+}
+
+.icon-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: calc( 100% / 2 );
+    background: blue;
+}
+
+.bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: var(--height-back);
     margin-top: 5px;
     border-right: solid 2px #333;
     border-bottom: solid 2px #333;
     border-left: solid 2px #333;
     border-radius:0 0 5px 5px; 
     box-shadow:0 2px 0px #666,0 3px 0px #555,0 4px 0px #444,0 6px 6px #000,inset 0 -1px 1px rgba(255,255,255,0.5),inset 0 -4px 5px #000;
+    box-sizing: border-box;
     background:-webkit-linear-gradient(-60deg,#000,#333,#000,#333 75%);
     
 }
 
+.keyboard {
+    width: 880px;
+    height: 300px;
+}
+
 .keyName {
     display: flex;
-    width: var(--width-key);
-    height: var(--height-keyName);
+    width: 880px;
+    height: 40px;
 }
 
-.key {
-    display: flex;
-    width: var(--width-key);
-    height: var(--height-key);
-}
-
-.blackKeyName-U1 {
+.whiteKeyName {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: var(--width-keyName);
-    height: var(--height-keyName);
-    margin: 0 var(--margin-blackKeyName);
-    color: var(--color-gold-light);
-    font-size: var(--fontSize-keyName);
-    font-family: var(--fontFamily-keyName);
+    width: 40px;
+    height: 40px;
+    color: gold;
+    font-size: 20px;
+    /*font-family: var(--fontFamily-keyName);*/
     user-select: none;
 }
 
@@ -161,25 +115,12 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: var(--width-keyName);
-    height: var(--height-keyName);
-    margin-left: var(--margin-blackKeyName);
-    color: var(--color-gold-light);
-    font-size: var(--fontSize-keyName);
-    font-family: var(--fontFamily-keyName);
-    user-select: none;
-}
-
-.blackKeyName-right {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: var(--width-keyName);
-    height: var(--height-keyName);
-    margin-right: var(--margin-blackKeyName);
-    color: var(--color-gold-light);
-    font-size: var(--fontSize-keyName);
-    font-family: var(--fontFamily-keyName);
+    width: 40px;
+    height: 40px;
+    margin-left: 20px;
+    color: gold;
+    font-size: 20px;
+    /*font-family: var(--fontFamily-keyName);*/
     user-select: none;
 }
 
@@ -187,50 +128,76 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: var(--width-keyName);
-    height: var(--height-keyName);
-    color: var(--color-gold-light);
-    font-size: var(--fontSize-keyName);
-    font-family: var(--fontFamily-keyName);
+    width: 40px;
+    height: 40px;
+    color: gold;
+    font-size: 20px;
+    /*font-family: var(--fontFamily-keyName);*/
     user-select: none;
 }
 
-.blackKeyName-space {
+.blackKeyName-right {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: var(--width-keyName);
-    height: var(--height-keyName);
-    color: var(--color-gold-light);
-    font-size: var(--fontSize-keyName);
-    font-family: var(--fontFamily-keyName);
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+    color: gold;
+    font-size: 20px;
+    /*font-family: var(--fontFamily-keyName);*/
+    user-select: none;
+}
+
+.key {
+    display: flex;
+    width: 880px;
+    height: 220px;
+    background: blue;
 }
 
 .whiteKey {
     position: relative;
-    width: var(--width-whiteKey);
-    height: var(--height-whiteKey);
+    width: 40px;
+    height: 220px;
     padding: 0;
     border:solid 1px #ccc;
     border-radius:0 0 3px 3px; 
     box-shadow:inset 0 1px 0px #fff,inset 0 -1px 0px #fff,inset 1px 0px 0px #fff,inset -1px 0px 0px #fff,0 0 3px rgba(0,0,0,0.7);
+    box-sizing: border-box;
     background:#fff;
     cursor: pointer;
 }
 
-.base{
+.blackKey {
+    position:relative;
+    z-index: 1;
+    width: 24px;
+    height: 130px;
+    margin: 0 -12px;
+    border-width:1px 2px 7px;
+    border-style:solid;
+    border-color:#666 #222 #111 #555; 
+    border-radius:0 0 2px 2px;
+    box-shadow:inset 0px -1px 2px rgba(255,255,255,0.4),0 2px 3px rgba(0,0,0,0.4);
+    box-sizing: border-box;
+    background:linear-gradient(-20deg,#333,#000,#333);
+    cursor: pointer;
+}
+
+span {
     display: inline-flex;
     justify-content: center;
     align-items: center;
     position: absolute;
     bottom: 0;
-    width: var(--width-whiteKey);
-    height: var(--height-baseNote);
-    font-size: var(--fontSize-keyName);
-    font-family: var(--fontFamily-keyName);
-    
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    /*font-family: var(--fontFamily-keyName);*/
 }
 
+/*
 .whiteKey-active {
     display: inline-block;
     position: relative;
@@ -265,21 +232,6 @@ html {
     content:"";
 }
 
-.blackKey {
-    position:relative;
-    z-index: 1;
-    width: var(--width-blackKey);
-    height: var(--height-blackKey);
-    margin: 0 var(--margin-blackKey);
-    border-width:1px 2px 7px;
-    border-style:solid;
-    border-color:#666 #222 #111 #555; 
-    border-radius:0 0 2px 2px;
-    box-shadow:inset 0px -1px 2px rgba(255,255,255,0.4),0 2px 3px rgba(0,0,0,0.4); 
-    background:linear-gradient(-20deg,#333,#000,#333);
-    cursor: pointer;
-}
-
 .blackKey-active {
     height: var(--height-blackKey);
     border-width:7px 2px 1px;
@@ -287,16 +239,4 @@ html {
     box-shadow:inset 0px -1px 1px rgba(255,255,255,0.4),0 1px 0px rgba(0,0,0,0.8),0 2px 2px rgba(0,0,0,0.4),0 -1px 0px #000;
     -webkit-box-shadow:inset 0px -1px 1px rgba(255,255,255,0.4),0 1px 0px rgba(0,0,0,0.8),0 2px 2px rgba(0,0,0,0.4),0 -1px 0px #000;
     -moz-box-shadow:inset 0px -1px 1px rgba(255,255,255,0.4),0 1px 0px rgba(0,0,0,0.8),0 2px 2px rgba(0,0,0,0.4),0 -1px 0px #000;
-}
-
-.whiteKeyName {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: var(--width-keyName);
-    height: var(--height-keyName);
-    color: var(--color-gold-light);
-    font-size: var(--fontSize-keyName);
-    font-family: var(--fontFamily-keyName);
-    user-select: none;
-}
+}*/
