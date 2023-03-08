@@ -1,0 +1,21 @@
+リンク
+
+HTML
+https://webliker.info/html/24318/ 【テンプレ付き】headには何を書くの？メタデータ全て解説！
+
+ピアノ
+https://www.suganami.com/info/50466 ピアノの3本のペダル。役割の違いをご存知ですか？‐コラム37
+
+Font
+https://fonts.google.com/specimen/EB+Garamond?category=Serif,Display,Monospace Font
+
+favicon
+https://coliss.com/articles/build-websites/operation/work/how-to-favicon.html 2023年版、HTMLによるファビコン設定方法、さまざまなブラウザやデバイスに対応させる最小限のセットは6種類のファイルが必要
+https://realfavicongenerator.net/ Favicon Generator. For real.
+https://sdesignlabo.com/web/favicon/ 【2023年最新版】ファビコン（favicon）のサイズ一覧と作り方
+
+キー配列
+https://archisite.co.jp/pick-up/key-layout/ キー配列
+
+Web-Audio
+https://developer.mozilla.org/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API Web Audio API の使用
