@@ -1,17 +1,14 @@
 /*
     CSSプロパティの書き順
     https://zenn.dev/web_tips/articles/f1167f4314dcb3
+    Font:EB Garamond
+    https://fonts.google.com/specimen/EB+Garamond?category=Serif,Display,Monospace
 */
 
-/*
-    @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
-
+@font-face {
     font-family: 'EB Garamond', serif;
-*/
-
-/*
-@font-face
-*/
+    src: url("../font/EB_Garamond/EBGaramond-VariableFont_wght.ttf");
+}
 
 :root {
     --height-back: calc( ( 100vh / 2 ) - 6px );
@@ -47,12 +44,27 @@ body {
     width: 100%;
     height: calc( 100% / 2 );
     color: gold;
-    font-size:80px;
-    /*font-family: var(--fontFamily-top);*/
+    font-size: 8rem;
+    font-family: 'EB Garamond', serif;
     user-select: none;
 }
 
-.setting {
+.icon-block {
+    display: flex;
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 150px;
+    height: 50px;
+}
+
+.icon {
+    margin-right: 25px;
+    width: 50px;
+    height: 50px;
+}
+
+.volume {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,22 +73,50 @@ body {
     height: calc( 100% / 2 );
 }
 
-.icon-block {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 600px;
-    height: calc( 100% / 2 );
-    background: red;
-}
-
 .volume-block {
     display: flex;
+    width: 600px;
+    height: 75px;
+}
+
+.volume-icon {
+    width: 75px;
+    height: 75px;
+}
+
+.volume-number {
+    display: flex;
     justify-content: center;
     align-items: center;
-    width: 600px;
-    height: calc( 100% / 2 );
-    background: blue;
+    width: 75px;
+    height: 75px;
+    color: gold;
+    font-size: 3rem;
+    font-family: 'EB Garamond', serif;
+    user-select: none;
+}
+
+.volume-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 450px;
+    height: 75px;
+}
+
+.volume-var {
+    width: 100%;
+    height: 5px;
+    background: gold;
+}
+
+.volume-knob {
+    position: relative;
+    bottom: 5px;
+    width: 15px;
+    height: 15px;
+    border-radius: 7.5px;
+    background: #666;
 }
 
 .bottom {
@@ -114,8 +154,8 @@ body {
     width: 40px;
     height: 40px;
     color: gold;
-    font-size: 20px;
-    /*font-family: var(--fontFamily-keyName);*/
+    font-size: 2rem;
+    font-family: 'EB Garamond', serif;
     user-select: none;
 }
 
@@ -127,8 +167,8 @@ body {
     height: 40px;
     margin-left: 20px;
     color: gold;
-    font-size: 20px;
-    /*font-family: var(--fontFamily-keyName);*/
+    font-size: 2rem;
+    font-family: 'EB Garamond', serif;
     user-select: none;
 }
 
@@ -139,8 +179,8 @@ body {
     width: 40px;
     height: 40px;
     color: gold;
-    font-size: 20px;
-    /*font-family: var(--fontFamily-keyName);*/
+    font-size: 2rem;
+    font-family: 'EB Garamond', serif;
     user-select: none;
 }
 
@@ -152,8 +192,8 @@ body {
     height: 40px;
     margin-right: 20px;
     color: gold;
-    font-size: 20px;
-    /*font-family: var(--fontFamily-keyName);*/
+    font-size: 2rem;
+    font-family: 'EB Garamond', serif;
     user-select: none;
 }
 
@@ -201,8 +241,8 @@ span {
     bottom: 0;
     width: 40px;
     height: 40px;
-    font-size: 20px;
-    /*font-family: var(--fontFamily-keyName);*/
+    font-size: 2rem;
+    font-family: 'EB Garamond', serif;
 }
 
 /*
