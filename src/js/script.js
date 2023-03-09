@@ -12,6 +12,7 @@
 */
 
 let presskey = {};
+let audio = {};
 
 const scale_Array = {
   "q" : "C3",
