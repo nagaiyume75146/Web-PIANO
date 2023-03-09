@@ -1,0 +1,116 @@
+https://www.w3.org/ W3C
+
+https://yu-nix.com/archives/src-toha-programming/ プログラミングで使うsrcとは何か？
+
+ピアノ
+    https://codepen.io/tatsuya/pen/MYXVyz codepenピアノ
+    https://www.musicca.com/jp/piano バーチャルピアノ
+    https://pluginjapan.com/2205-heavyocity-foundations-piano/ 【無料】シネマティックなピアノ音源Heavyocity『FOUNDATIONS | Piano』が無償配布中【KONTAKT音源】
+    https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q10173419990 【ピアノ単音素材が欲しい】(yahoo知恵袋)
+    https://web-breeze.net/web-piano-html5audio/ WEB Piano – HTML5 Audioでピアノを作る
+    https://flip-4.com/34 WEBブラウザでピアノが弾けるサービス7選をご紹介！
+    https://tomari.org/main/java/oto.html 音階の周波数
+    https://inalesson.com/frequency_list/2417/ ドレミの振動数！ピアノ88鍵全音域の周波数一覧表
+    http://gakusyu.jp/musictheory/frequencies_of_88notes.php ピアノの各音の周波数の一覧（音も出るお）
+    https://blog.obniz.com/make/piano-on-browser ブラウザ上の鍵盤とスピーカーでピアノを再現
+    https://9-bb.com/css%E3%81%A0%E3%81%91%E3%81%A7%E3%83%94%E3%82%A2%E3%83%8E%E3%81%AE%E9%8D%B5%E7%9B%A4%E3%82%92%E3%83%A1%E3%83%8B%E3%83%A5%E3%83%BC%E3%81%AB%E4%BB%95%E7%AB%8B%E3%81%A6%E3%81%9F%E3%83%87%E3%82%B6/
+    (CSSだけでピアノの鍵盤をメニューに仕立てたデザイン)
+    https://teratail.com/questions/201975 簡易ピアノを作って音階を鳴らしたい
+    https://www.youtube.com/watch?v=1pjXrH5kEfY piano Plays all 88keys ピアノ 88鍵盤 左から右 全部鳴らします。
+    http://www.st38.net/sukkiri-chigai/z0117.html 音階と音程の違い
+    https://masatomy.com/musical_theory/pitch_and_syllable 音名と階名の違い! 「ドレミ」と「CDE」の使い方
+    https://inalesson.com/frequency_list/2417/ ドレミの振動数！ピアノ88鍵全音域の周波数一覧表
+    https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q1156329116 音階と音程の違いがよくわかりません。
+    https://achapi2718.blogspot.com/2012/10/blog-post.html 音名(国際式)と周波数
+    https://www.onlinepianist.com/virtual-piano Virtual Piano Keyboard
+    https://recursivearts.com/virtual-piano/ Virtual Piano
+    https://prtimes.jp/main/html/rd/p/000000588.000010701.html 新開発のサウンドエンジンを搭載し、迫力ある多彩なサウンドを自由に表現できる次世代キーボード　ヤマハ 電子キーボード『PSR-E473』を発売
+    https://www.soundhouse.co.jp/products/detail/item/204264/?gclid=CjwKCAjw7p6aBhBiEiwA83fGugLOnUqu0drVf80FQpwTsMEuvCK6JbIqDIlzkH8zve0dqNAHGdB6FhoC18QQAvD_BwE
+    (YAMAHA ( ヤマハ ) / P-45 B 電子ピアノ)
+    https://www.soundhouse.co.jp/howto/keyboard/pedal/ サスティンペダルの極性について
+    https://www.suganami.com/info/50466 ピアノの3本のペダル。役割の違いをご存知ですか？‐コラム37
+    https://sp-sukusuku.jp/2070290014-2/#tag_contents_blog_ttl01_1 電子ピアノ・キーボード用ペダルおすすめ5選！ペダルの役割と種類、選び方とは
+    https://p-piano.com/key-61-76 電子ピアノ鍵盤数の調べ方・・・楽譜の「最高音」「最低音」
+    https://band-beginners.com/%E9%9B%BB%E5%AD%90%E3%83%94%E3%82%A2%E3%83%8E%E3%83%BB%E3%82%AD%E3%83%BC%E3%83%9C%E3%83%BC%E3%83%89%E3%81%AE%E9%8D%B5%E7%9B%A4%E6%95%B0%E3%81%AF%E3%81%84%E3%81%8F%E3%81%A4%E3%81%8C%E3%81%84%E3%81%84/
+    (電子ピアノ・キーボードの鍵盤数はいくつがいいの？ おすすめ鍵盤数を演奏の目的別にチェック！)
+    https://inalesson.com/kennbannsuu/106/ 【ピアノの大きさ】鍵盤数の違いを徹底解説！それぞれで弾ける曲一覧
+    http://kyoto-hannaripiano.com/20319.html (ピアノ初心者)32や44の鍵盤数でも大丈夫ですか？
+    https://store.shopping.yahoo.co.jp/okumuragakki/casio-ct-s1bk.html カシオ（CASIO) 電子キーボード Casiotone CT-S1 BK（ブラック）タッチレスポンス付き61鍵標準鍵盤 シンプルデザイン
+    https://utatame.com/pitch-name-190701/ 『C4』や『midC』ってなに？音の読み方やルールを解説
+    https://sakikomasuda.com/music-theory/basic/whole-half/ 全音と半音を知れば音楽を制す！！
+    https://www.diyphotography.net/create-entire-new-keyboard-shortcodes-hack/ このハックでショートコードのまったく新しいキーボードを作成します
+    https://qiita.com/kanari3/items/f3d2c0e04dbe0dffcb87 Karabiner-Elementsでデュアルキーボードを使用する
+    https://wtp-web.com/blog/installing-and-using-luamacros-for-your-2nd-keyboard/ Installing and using LuaMacros for your 2nd keyboard
+色
+    https://www.colordic.org/#google_vignette 原色大辞典
+
+パワポ
+    https://www.anadigilife.com/office-shape-drawing-click/ 【Office共通】正方形、正円、正三角形を簡単に作成する小技
+    https://pmcnet.jp/archives/3705 Microsoft OfficeのバージョンによるSVG出力方法の違い
+    https://dekiru.net/article/15848/ PowerPointで特殊な記号を入力する方法
+    https://www.relief.jp/docs/003087.html 記号と特殊文字が使えない
+
+https://itojisan.xyz/settings/24188/ PCのマウスの移動速度/感度を調整して変更する方法 – Windows10/Mac
+https://itojisan.xyz/trouble/13014/ タッチパッドが設定できない/デバイス設定がない時の対処法 – Windows10/11
+
+https://codeforfun.jp/how-to-solve-failed-to-load-sourcemap-problem/ SourceMapソースマップエラーの対処法s
+
+https://litera.app/blog/fullscreen-shortcut/ 全画面表示（フルスクリーン）をショートカットキーで行う方法
+https://www.pc-jozu.com/mame/windows-fullscreen/ Windows 10のChromeやEdgeで全画面表示にする・解除する方法
+
+https://www.vagrantup.com/ vagrant
+
+ショートカット
+    https://viva-drone.com/windows_shortcut/ Windowsのショートカットキー早見表！効かないときの対処法も解説
+    https://www.ex-it-blog.com/Shortcut-key-know-how ショートカットキーの同時押しのコツ。Ctrl、Alt、Shiftを先に。
+
+http://itdoc.hitachi.co.jp/manuals/3020/30203B6100/0077.htm 3.5.1　レジストリキーの値を変更する方法
+https://www.naporitansushi.com/changekey/ 【Change Key】キーボードの割り当てを変更するソフトの使い方
+https://mo-no-log.com/keyboard-array-change/ キーボードの配列変更を変更して効率的に使う方法を徹底解説!!
+
+音量
+    https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q14154066279 ミュート(mute)の英語における対義語は何でしょう?
+
+フローチャート
+https://kashika.biz/flowchart-7/ 【業務フローの書き方】4つの具体例で理解する分岐の表現方法
+
+デュアルキーボード
+    http://www.hidmacros.eu/download.php LuaMacros Download
+    http://www.hidmacros.eu/forum/viewtopic.php?f=10&t=241#p794
+    https://www-hidmacros-eu.translate.goog/forum/viewtopic.php?t=3723&_x_tr_sch=http&_x_tr_sl=en&_x_tr_tl=ja&_x_tr_hl=ja&_x_tr_pto=sc HID マクロと Lua マクロ
+    https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q14170897334 autohotkeyについてです。
+    https://gkkmon.com/ja/simple-autohotkey-installation-basic-usage-simple-example-3/ 簡単なAutoHotkeyインストールと基本的な使用方法、簡単な例
+    https://qiita.com/kmth220/items/06908bb964e383edaaaf キー割り当てソフト「LuaMacros」の導入
+    https://www.naporitansushi.com/autohotkey/ 【AutoHotkey】キーに別の機能を割り当てるソフトの使い方
+    https://gkkmon.com/ja/simple-autohotkey-installation-basic-usage-simple-example-3/ 簡単なAutoHotkeyインストールと基本的な使用方法、簡単な例
+    https://m-hiyama.hatenablog.com/entry/2020/07/16/124314#%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E5%88%9D%E5%BF%83%E8%80%85%E3%81%AF%E3%82%84%E3%82%81%E3%81%A8%E3%81%91
+    (プログラミング言語としての AutoHotKey)
+    https://polo-web.com/X-Plane-LuaMacros/ （X-Plane）LuaMacroによる２番目のキーボード
+    https://www.toptal.com/developers/keycode/for/a キーコード
+    https://diary.d-yoshi.com/?p=12844 【アプリ】LuaMacrosの異変
+    https://eki-docomokirai.hatenablog.com/entry/20210617/1623895472#%E4%B8%8A%E3%81%AE%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E3%81%AE%E8%AA%AC%E6%98%8E%E3%82%92%E5%B0%91%E3%81%97
+    (LuaMacrosで通常のUSBテンキーをプログラマブル化する)
+    http://www.hidmacros.eu/forum/viewtopic.php?t=3730 Having problems opening LuaMacros (intermittent)
+    https://ascii.jp/elem/000/004/034/4034117/ キーボードのキー入れ替えにおける、仮想キーコードとキーボードスキャンコード
+    https://ict-worker.com/pc/pulovers_macro_creator.html お手軽、最強自動化ツール【Pulover’s Macro Creator】を使ってみた
+    https://into-the-program.com/javascript-click-touch-long-press-detect/ クリックやタッチの長押しを判定する
+    http://www.vector.co.jp/soft/dl/winnt/game/se292529.html ギャルゲーマスター J
+    http://denziha.blogspot.com/2021/ LuaMacrosでバッチを実行する(プログラマブルキーボードもどき)
+    https://jj-labo.seesaa.net/article/pc-game-tool-free.html 【2022年版】連打ツール8本を厳選紹介！マウス、キーボード、ゲームパッド用おすすめフリーソフト [PCゲーム／Win 10 動作確認済]
+    https://github.com/quirinux/luamacros-documentation luamacros-documentation
+    https://freesoft-100.com/pasokon/keyboard-macro.html キーボードマクロツール とは
+    https://www.hidmacros.eu/download.php LuaMacros Download
+    https://web.archive.org/web/20201101092824/https://ken26u.hatenablog.jp/entry/2020/06/29/192426 使ってない外付けテンキーをプログラマブル キーボード化
+    https://fuchiaz.com/usage-autohotkey/ 『AutoHotkey』の使い方【入門編・初心者向け】
+    https://www.dell.com/support/kbdoc/ja-jp/000130957/dell-latitude-e5250-5250-and-e5450-5450-keyboard-guide Dell Latitude E5250、5250、E5450、5450キーボード ガイド
+    https://learn.microsoft.com/ja-jp/previous-versions/windows/scripting/cc364423(v=msdn.10)?redirectedfrom=MSDN SendKeys メソッド
+    https://ja.wikipedia.org/wiki/Windows_Script_Host Windows Script Host
+    https://atmarkit.itmedia.co.jp/ait/articles/0606/02/news116_2.html 第1回　WSHを始めよう
+    https://www.autohotkey.com/
+    https://gozuk16.hatenablog.com/entry/2021/02/10/132507 WindowsでもMacのKarabiner-Elementsのようにキーバインドを変更したい
+    http://www.din.or.jp/~nekomi/honpo/dat/ap.html ■ Windows Appli AutoPuncher
+    https://smart-change-phone.net/windows10-lzh-error/ 【Windows10】「lzh」ファイルが開けない時の原因と対処法
+    https://jj-labo.seesaa.net/article/pc-game-tool-free.html 【2022年版】連打ツール8本を厳選紹介！マウス、キーボード、ゲームパッド用おすすめフリーソフト [PCゲーム／Win 10 動作確認済]
+    https://keytokey-dev.net/archives/%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89.html#google_vignette KeyToKeyのダウンロード方法
+    http://www.hidmacros.eu/forum/viewtopic.php?t=343 KeyDown または KeyUp イベントのみを送信する
+    https://diary.d-yoshi.com/?p=12844 【アプリ】LuaMacrosの異変
