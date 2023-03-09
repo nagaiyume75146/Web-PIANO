@@ -57,9 +57,9 @@ const scale_Array = {
 
 document.onkeydown = function(event) {
   const scale = scale_Array[event.key];
-  if(presskey[scale]!=true) {
+  if(presskey[scale] != true) {
     presskey[scale] = true;
-    play(scale);
+    play(scale)
 
     if(scale.length==2) {
       document.getElementById(scale).classList.add("whiteKey-active");
@@ -74,8 +74,9 @@ document.onkeyup = function(event) {
   const scale = scale_Array[event.key];
   if(presskey[scale]) {
     presskey[scale] = false;
+    pause(scale)
 
-    if(scale.length==2) {
+    if(scale.length == 2) {
       document.getElementById(scale).classList.remove("whiteKey-active");
     }
     else {
@@ -88,13 +89,14 @@ document.onkeyup = function(event) {
 function play(scale){
   let file = "src/audio/" + scale + "." + "mp3";
   
-  let audio = new Audio(file);
-  audio.volume = 50 * 0.01;
-  audio.play()
+  audio[scale] = new Audio(file);
+  audio[scale].volume = 50 * 0.01;
+  audio[scale].play()
 }
 
 //ピアノの音を止める関数
-function pause(scala){
-  audio.pause()
-  audio.currentTime = 0;
+function pause(scale){
+  audio[scale].pause()
+  audio[scale].currentTime = 0;
+  audio[scale] = false;
 }
