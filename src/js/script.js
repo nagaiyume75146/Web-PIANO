@@ -92,3 +92,9 @@ function play(scale){
   audio.volume = 50 * 0.01;
   audio.play()
 }
+
+//ピアノの音を止める関数
+function pause(scala){
+  audio.pause()
+  audio.currentTime = 0;
+}
