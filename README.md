@@ -1,8 +1,6 @@
 # Web-Piano
 
-[Web-Piano]()
-
-Webで使用することのできるピアノです
+[Web-Piano]()はWebで使用することのできるピアノです
 
 ## 参考ページ
 
