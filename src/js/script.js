@@ -74,6 +74,7 @@ document.onkeyup = function(event) {
   const scale = scale_Array[event.key];
   if(presskey[scale]) {
     presskey[scale] = false;
+    audio[scale] = false;
 
     if(scale.length==2) {
       document.getElementById(scale).classList.remove("whiteKey-active");
