@@ -96,38 +96,101 @@ const scale_Array = {
   "l" : "B♭5",
 };
 
-document.onkeydown = function(event) {
-  const scale = scale_Array[event.key];
-  if(scale) {
-    if(presskey[scale] != true) {
-      presskey[scale] = true;
-      play(scale)
-  
-      if(scale.length==2) {
-        document.getElementById(scale).classList.add("whiteKey-active");
+const touch_event = window.ontouchstart;
+const touch_points = navigator.maxTouchPoints;
+if( touch_event !== undefined && 0 < touch_points ) {
+
+  const whiteKey = document.querySelector(".whiteKey");
+  for(let i=0; i<22; i++) {
+    whiteKey[i].addEventListener("touchstart",function(){
+      const scale = scale_Array[whiteKey_Array[i]];
+      if(scale) {
+        if(presskey[scale] != true) {
+          presskey[scale] = true;
+          play(scale)
+          document.getElementById(scale).classList.add("whiteKey-active");
+        }
       }
-      else {
-        document.getElementById(scale).classList.add("blackKey-active");
+    });
+  }
+
+  for(let i=0; i<22; i++) {
+    whiteKey[i].addEventListener("touchend",function(){
+      const scale = scale_Array[whiteKey_Array[i]];
+      if(scale) {
+        if(presskey[scale]) {
+          presskey[scale] = false;
+          pause(scale)
+          document.getElementById(scale).classList.remove("whiteKey-active");
+        }
+      }
+    });
+  }
+
+  const blackKey = document.querySelector(".blackKey");
+  for(let i=0; i<15; i++) {
+    blackKey[i].addEventListener("touchstart",function(){
+      const scale = scale_Array[blackKey_Array[i]];
+      if(scale) {
+        if(presskey[scale] != true) {
+          presskey[scale] = true;
+          play(scale)
+          document.getElementById(scale).classList.add("blackKey-active");
+        }
+      }
+    });
+  }
+
+  for(let i=0; i<15; i++) {
+    blackKey[i].addEventListener("touchend",function(){
+      const scale = scale_Array[blackKey_Array[i]];
+      if(scale) {
+        if(presskey[scale]) {
+          presskey[scale] = false;
+          pause(scale)
+          document.getElementById(scale).classList.remove("blackKey-active");
+        }
+      }
+    });
+  }
+
+}
+else {
+
+  document.onkeydown = function(event) {
+    const scale = scale_Array[event.key];
+    if(scale) {
+      if(presskey[scale] != true) {
+        presskey[scale] = true;
+        play(scale)
+    
+        if(scale.length==2) {
+          document.getElementById(scale).classList.add("whiteKey-active");
+        }
+        else {
+          document.getElementById(scale).classList.add("blackKey-active");
+        }
       }
     }
   }
-}
-
-document.onkeyup = function(event) {
-  const scale = scale_Array[event.key];
-  if(scale) {
-    if(presskey[scale]) {
-      presskey[scale] = false;
-      pause(scale)
   
-      if(scale.length == 2) {
-        document.getElementById(scale).classList.remove("whiteKey-active");
+  document.onkeyup = function(event) {
+    const scale = scale_Array[event.key];
+    if(scale) {
+      if(presskey[scale]) {
+        presskey[scale] = false;
+        pause(scale)
+    
+        if(scale.length == 2) {
+          document.getElementById(scale).classList.remove("whiteKey-active");
+        }
+        else {
+          document.getElementById(scale).classList.remove("blackKey-active");
+        }
       }
-      else {
-        document.getElementById(scale).classList.remove("blackKey-active");
-      }
-    }
-  }  
+    }  
+  }
+
 }
 
 //ピアノの音を流す関数
