@@ -27,6 +27,8 @@
     --margin-blackKey: calc( var(--width-blackKey) / -2 ); /*-12px*/
 
     --margin-blackKeyName: calc( var(--width-whiteKey) / 2 ); /*20px*/
+
+    --font-size: calc( var(--width-whiteKey) / 2 );
 }
 
 html {
@@ -232,6 +234,6 @@ span {
     bottom: 0;
     width: var(--width-whiteKey);
     height: var(--width-whiteKey);
-    font-size: 1.5rem;
+    font-size: var(--font-size);
     font-family: 'EB Garamond', serif;
 }
