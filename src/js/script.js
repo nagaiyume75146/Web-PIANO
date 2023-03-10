@@ -127,7 +127,7 @@ if( touch_event !== undefined && 0 < touch_points ) {
     });
   }
 
-  const blackKey = document.getElementsByClassName(".blackKey");
+  const blackKey = document.querySelector(".blackKey");
   for(let i=0; i<15; i++) {
     blackKey[i].addEventListener("mousedown",function(){
       console.log("black")
