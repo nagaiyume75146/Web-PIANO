@@ -17,7 +17,7 @@ window.addEventListener("load",function (params) {
   
   const bottom = document.getElementsByClassName("bottom")[0];
   const keyboard = document.getElementsByClassName("keyboard")[0];
-  if( (bottom.clientWidth / bottom.clientHeight) > (880 / 330) ){ 
+  if( (bottom.clientWidth / bottom.clientHeight) > (880 / 300) ){ 
     keyboard.style.width = "";
     keyboard.style.height = "100%";
   }
@@ -36,7 +36,7 @@ window.addEventListener("resize",function () {
 
   const bottom = document.getElementsByClassName("bottom")[0];
   const keyboard = document.getElementsByClassName("keyboard")[0];
-  if( (bottom.clientWidth / bottom.clientHeight) > (880 / 330) ){ 
+  if( (bottom.clientWidth / bottom.clientHeight) > (880 / 300) ){ 
     keyboard.style.width = "";
     keyboard.style.height = "100%";
   }
