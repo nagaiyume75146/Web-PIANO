@@ -14,7 +14,10 @@
 // ロードしたときに画面を合わせる
 window.addEventListener("load",function (params) {
   const root = document.querySelector(':root');
-  root.style.setProperty("--height", 0);
+  root.style.setProperty("--height-keyboard", 0);
+
+  const height = window.innerHeight + "px";
+  root.style.setProperty("--height",height);
   
   const bottom = document.getElementsByClassName("bottom")[0];
   const keyboard = document.getElementsByClassName("keyboard")[0];
@@ -27,14 +30,17 @@ window.addEventListener("load",function (params) {
     keyboard.style.height = "";
   }
 
-  const height = document.getElementsByClassName("keyboard")[0].clientHeight + "px";
-  root.style.setProperty("--height", height);
+  const height_keyboard = document.getElementsByClassName("keyboard")[0].clientHeight + "px";
+  root.style.setProperty("--height-keyboard", height_keyboard);
 })
 
 // リサイズしたときに画面を合わせる
 window.addEventListener("resize",function () {
   const root = document.querySelector(':root');
-  root.style.setProperty("--height", 0);
+  root.style.setProperty("--height-keyboard", 0);
+
+  const height = window.innerHeight + "px";
+  root.style.setProperty("--height",height);
 
   const bottom = document.getElementsByClassName("bottom")[0];
   const keyboard = document.getElementsByClassName("keyboard")[0];
@@ -47,8 +53,8 @@ window.addEventListener("resize",function () {
     keyboard.style.height = "";
   }
 
-  const height = document.getElementsByClassName("keyboard")[0].clientHeight + "px";
-  root.style.setProperty("--height", height);
+  const height_keyboard = document.getElementsByClassName("keyboard")[0].clientHeight + "px";
+  root.style.setProperty("--height-keyboard", height_keyboard);
 })
 
 let presskey = {}; // 押したキーを保存する配列
