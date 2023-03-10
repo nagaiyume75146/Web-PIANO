@@ -101,7 +101,7 @@ const touch_points = navigator.maxTouchPoints;
 if( touch_event !== undefined && 0 < touch_points ) {
   const whiteKey = document.querySelectorAll(".whiteKey");
   for(let i=0; i<21; i++) {
-    whiteKey[i].addEventListener("mousedown",function() {
+    whiteKey[i].addEventListener("touchstart",function() {
       const scale = scale_Array[whiteKey_Array[i]];
       if(presskey[scale] != true) {
         presskey[scale] = true;
