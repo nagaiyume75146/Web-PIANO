@@ -144,32 +144,36 @@ if( touch_event !== undefined && 0 < touch_points ) {
 else {
   document.onkeydown = function(event) {
     const scale = scale_Array[event.key];
-    if(presskey[scale] != true) {
-      presskey[scale] = true;
-      play(scale)
-  
-      if(scale.length==2) {
-        document.getElementById(scale).classList.add("whiteKey-active");
-      }
-      else {
-        document.getElementById(scale).classList.add("blackKey-active");
+    if(scale) {
+      if(presskey[scale] != true) {
+        presskey[scale] = true;
+        play(scale)
+    
+        if(scale.length==2) {
+          document.getElementById(scale).classList.add("whiteKey-active");
+        }
+        else {
+          document.getElementById(scale).classList.add("blackKey-active");
+        }
       }
     }
   }
   
   document.onkeyup = function(event) {
     const scale = scale_Array[event.key];
-    if(presskey[scale]) {
-      presskey[scale] = false;
-      pause(scale)
-  
-      if(scale.length == 2) {
-        document.getElementById(scale).classList.remove("whiteKey-active");
+    if(scale) {
+      if(presskey[scale]) {
+        presskey[scale] = false;
+        pause(scale)
+    
+        if(scale.length == 2) {
+          document.getElementById(scale).classList.remove("whiteKey-active");
+        }
+        else {
+          document.getElementById(scale).classList.remove("blackKey-active");
+        }
       }
-      else {
-        document.getElementById(scale).classList.remove("blackKey-active");
-      }
-    }
+    }  
   }
 }
 
