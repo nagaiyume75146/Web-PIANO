@@ -14,46 +14,14 @@
 /*
 // ロードしたときに画面を合わせる
 window.addEventListener("load",function (params) {
-  const root = document.querySelector(':root');
-  root.style.setProperty("--height", 0);
   
-  const bottom = document.getElementsByClassName("bottom")[0];
-  const keyboard = document.getElementsByClassName("keyboard")[0];
-  if( (bottom.clientWidth / bottom.clientHeight) > (880 / 300) ){ 
-    keyboard.style.width = "";
-    keyboard.style.height = "100%";
-  }
-  else {
-    keyboard.style.width = "100%";
-    keyboard.style.height = "";
-  }
-
-  const height = document.getElementsByClassName("keyboard")[0].clientHeight + "px";
-  root.style.setProperty("--height", height);
 })
 
 // リサイズしたときに画面を合わせる
 window.addEventListener("resize",function () {
-  const root = document.querySelector(':root');
-  root.style.setProperty("--height", 0);
-
-  const bottom = document.getElementsByClassName("bottom")[0];
-  const keyboard = document.getElementsByClassName("keyboard")[0];
-  if( (bottom.clientWidth / bottom.clientHeight) > (880 / 300) ){ 
-    keyboard.style.width = "";
-    keyboard.style.height = "100%";
-  }
-  else {
-    keyboard.style.width = "100%";
-    keyboard.style.height = "";
-  }
-
-  const height = document.getElementsByClassName("keyboard")[0].clientHeight + "px";
-  root.style.setProperty("--height", height);
 })*/
 
-let touchkey = {}; // 押したキーを保存する配列
-let mousekey = {}; // マウスで押したキーを保存する配列
+let touchkey = {}; // タッチしたキーを保存する配列
 let audio = {}; // 音を保存する配列
 
 const whiteKey = document.querySelectorAll(".whiteKey");
