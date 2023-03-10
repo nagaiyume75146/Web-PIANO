@@ -100,7 +100,7 @@ const touch_event = window.ontouchstart;
 const touch_points = navigator.maxTouchPoints;
 if( touch_event !== undefined && 0 < touch_points ) {
 
-  const whiteKey = document.querySelector(".whiteKey");
+  const whiteKey = document.querySelectorAll(".whiteKey");
   for(let i=0; i<22; i++) {
     whiteKey[i].addEventListener("touchstart",function(){
       const scale = scale_Array[whiteKey_Array[i]];
@@ -127,7 +127,7 @@ if( touch_event !== undefined && 0 < touch_points ) {
     });
   }
 
-  const blackKey = document.querySelector(".blackKey");
+  const blackKey = document.querySelectorAll(".blackKey");
   for(let i=0; i<15; i++) {
     blackKey[i].addEventListener("mousedown",function(){
       console.log("black")
