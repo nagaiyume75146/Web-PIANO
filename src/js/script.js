@@ -32,6 +32,8 @@ window.addEventListener("load",function () {
 
   const height_keyboard = document.getElementsByClassName("keyboard")[0].clientHeight + "px";
   root.style.setProperty("--height-keyboard", height_keyboard);
+
+  set
 })
 
 // リサイズしたときに画面を合わせる
@@ -56,6 +58,10 @@ window.addEventListener("resize",function () {
   const height_keyboard = document.getElementsByClassName("keyboard")[0].clientHeight + "px";
   root.style.setProperty("--height-keyboard", height_keyboard);
 })
+
+screen.addEventListener("orientationchange", () => {
+  setTimeout(function(){ location.href = "/"; },1);
+});
 
 let presskey = {}; // 押したキーを保存する配列
 let mousekey = {}; // マウスで押したキーを保存する配列
