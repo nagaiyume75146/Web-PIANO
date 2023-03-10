@@ -110,7 +110,7 @@ if( touch_event !== undefined && 0 < touch_points ) {
       }
     })
 
-    whiteKey[i].addEventListener("mouseup",function() {
+    whiteKey[i].addEventListener("touchebd",function() {
       const scale = scale_Array[whiteKey_Array[i]];
       if(presskey[scale]) {
         presskey[scale] = false;
@@ -130,7 +130,7 @@ if( touch_event !== undefined && 0 < touch_points ) {
       }
     })
 
-    blackKey[i].addEventListener("mouseup",function() {
+    blackKey[i].addEventListener("touchend",function() {
       const scale = scale_Array[blackKey_Array[i]];
       if(presskey[scale]) {
         presskey[scale] = false;
