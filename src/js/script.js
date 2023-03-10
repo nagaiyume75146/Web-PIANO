@@ -153,7 +153,7 @@ if( touch_event !== undefined && 0 < touch_points ) {
     });
   }
 
-  // / 黒鍵から離れたときの関数
+  // 黒鍵から離れたときの関数
   for(let i=0; i<15; i++) {
     blackKey[i].addEventListener("touchend",function(){
       const scale = scale_Array[blackKey_Array[i]];

@@ -11,19 +11,9 @@
 }
 
 :root {
-    --size-icon: calc( calc( calc( calc( 100vh / 2 ) - 6px ) / 2 ) * calc( 50 / 177 ) ); /*50px*/
-
     --height: 0;
 
-    --width-whiteKey: calc( var(--height) * calc( 40 / 300 ) ); /*40px*/
-    --height-whiteKey: calc( var(--height) * calc( 220 / 300 ) ); /*220px*/
-    --height-whiteKey-active: calc( var(--height) * calc( 216 / 300 ) ); /*216px*/
-
-    --width-blackKey: calc( var(--height) * calc( 24 / 300 ) ); /*24px*/
-    --height-blackKey: calc( var(--height) * calc( 130 / 300 ) ); /*130px*/
-    --margin-blackKey: calc( var(--width-blackKey) / -2 ); /*-12px*/
-
-    --margin-blackKeyName: calc( var(--width-whiteKey) / 2 ); /*20px*/
+    --height-top: calc( var(--height))
 }
 
 html {
@@ -36,26 +26,14 @@ body {
 }
 
 .top {
-    width: 100vw;
-    height: calc( ( 100vh / 2 ) - 6px );
+    width: var(--width-top);
+    height: var(--height);
     border-right: solid 2px #333;
     border-bottom: solid 2px #333;
     border-left: solid 2px #333;
-    border-radius:0 0 5px 5px; 
-    box-shadow:0 2px 0px #666,0 3px 0px #555,0 4px 0px #444,0 6px 6px #000,inset 0 -1px 1px rgba(255,255,255,0.5),inset 0 -4px 5px #000;
+    border-top: solid 2px #333;
+    border-radius:5px 5px 5px 5px; 
     box-sizing: border-box;
-    background:-webkit-linear-gradient(-60deg,#000,#333,#000,#333 75%);
-}
-
-.title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: calc( 100% / 2 );
-    color: gold;
-    font-size: 8rem;
-    font-family: 'EB Garamond', serif;
 }
 
 .icon-back {
@@ -73,83 +51,19 @@ body {
 }
 
 .bottom {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: calc( ( 100vh / 2 ) - 6px );
-    margin-top: 5px;
+    width: var(--width-top);
+    height: var(--height);
     border-right: solid 2px #333;
     border-bottom: solid 2px #333;
     border-left: solid 2px #333;
-    border-radius:0 0 5px 5px; 
-    box-shadow:0 2px 0px #666,0 3px 0px #555,0 4px 0px #444,0 6px 6px #000,inset 0 -1px 1px rgba(255,255,255,0.5),inset 0 -4px 5px #000;
+    border-top: solid 2px #333;
+    border-radius:5px 5px 5px 5px; 
     box-sizing: border-box;
-    background:-webkit-linear-gradient(-60deg,#000,#333,#000,#333 75%);
-    
 }
 
 .keyboard {
     aspect-ratio: 880 / 300;
     user-select: none;
-}
-
-.keyName {
-    display: flex;
-    width: 100%;
-    height: var(--width-whiteKey);
-}
-
-.whiteKeyName {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: var(--width-whiteKey);
-    height: var(--width-whiteKey);
-    color: gold;
-    font-size: 2rem;
-    font-family: 'EB Garamond', serif;
-}
-
-.blackKeyName-left {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: var(--width-whiteKey);
-    height: var(--width-whiteKey);
-    margin-left: var(--margin-blackKeyName);
-    color: gold;
-    font-size: 2rem;
-    font-family: 'EB Garamond', serif;
-}
-
-.blackKeyName-middle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: var(--width-whiteKey);
-    height: var(--width-whiteKey);
-    color: gold;
-    font-size: 2rem;
-    font-family: 'EB Garamond', serif;
-}
-
-.blackKeyName-right {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: var(--width-whiteKey);
-    height: var(--width-whiteKey);
-    margin-right: var(--margin-blackKeyName);
-    color: gold;
-    font-size: 2rem;
-    font-family: 'EB Garamond', serif;
-}
-
-.key {
-    display: flex;
-    width: 100%;
-    height: var(--height-whiteKey);
 }
 
 .whiteKey {
