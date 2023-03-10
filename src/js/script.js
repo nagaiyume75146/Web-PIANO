@@ -223,7 +223,7 @@ else {
 
   const blackKey = document.querySelectorAll(".blackKey");
   for(let i=0; i<15; i++) {
-    blackKey[i].addEventListener("touchstart",function(){
+    blackKey[i].addEventListener("mousedown",function(){
       console.log("black")
 
       const scale = scale_Array[blackKey_Array[i]];
@@ -238,7 +238,7 @@ else {
   }
 
   for(let i=0; i<15; i++) {
-    blackKey[i].addEventListener("touchend",function(){
+    blackKey[i].addEventListener("mouseup",function(){
       const scale = scale_Array[blackKey_Array[i]];
       if(scale) {
         if(mousekey[scale]) {
@@ -249,7 +249,7 @@ else {
       }
     });
   }
-  
+
 }
 
 //ピアノの音を流す関数
