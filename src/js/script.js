@@ -12,7 +12,7 @@
 */
 
 // ロードしたときに画面を合わせる
-window.addEventListener("load",function (params) {
+window.addEventListener("load",function () {
   const root = document.querySelector(':root');
   root.style.setProperty("--height-keyboard", 0);
 
