@@ -144,7 +144,6 @@ body {
     z-index: 1;
     width: var(--width-blackKey);
     height: var(--height-blackKey);
-    margin-top: var(--margin-blackKey);
     border-width:1px 2px 7px;
     border-style:solid;
     border-color:#666 #222 #111 #555; 
