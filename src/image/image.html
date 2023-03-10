@@ -12,32 +12,45 @@
         }
 
         .back {
+            display: flex;
+            justify-content: center;
             background: black;
         }
 
-        .top {
-            width: 100vw;
-            height: calc(100vh / 2);
-            font-family: 'EB Garamond', serif;
-            font-size: 200px;
-            color:#9f8f3e;
-            text-align: center;
+        .block {
+            width: 720px;
+            height: 720px;
         }
 
-        .bottom {
-            width: 100vw;
+        .top {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
             height: calc(100vh / 2);
             font-family: 'EB Garamond', serif;
             font-size: 100px;
             color:#9f8f3e;
-            text-align: center;
+        }
+
+        .bottom {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: calc(100vh / 2);
+            font-family: 'EB Garamond', serif;
+            font-size: 50px;
+            color:#9f8f3e;
         }
     </style>
 </head>
 <body>
     <div class="back">
-        <div class="top">Web-PIANO</div>
-        <div class="bottom">by nagaiyume75146</div>
+        <div class="block">
+            <div class="top">Web-PIANO</div>
+            <div class="bottom">by nagaiyume75146</div>
+        </div>
     </div>
 </body>
 </html>
