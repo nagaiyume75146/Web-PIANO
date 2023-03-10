@@ -17,7 +17,7 @@
 
     --width-whiteKey: calc( var(--height) * calc( 40 / 300 ) ); /*40px*/
     --height-whiteKey: calc( var(--height) * calc( 220 / 300 ) ); /*220px*/
-    --height-whiteKey-active: calc( var(--height-whiteKey) - 4 ); /*216px*/
+    --height-whiteKey-active: calc( var(--height) * calc( 216 / 300 ) ); /*216px*/
 
     --width-blackKey: calc( var(--height) * calc( 24 / 300 ) ); /*24px*/
     --height-blackKey: calc( var(--height) * calc( 130 / 300 ) ); /*130px*/
