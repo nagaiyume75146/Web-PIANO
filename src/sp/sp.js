@@ -15,16 +15,48 @@ alert("画面を固定してください")
 
 // ロードしたときに画面を合わせる
 window.addEventListener("load",function () {
-  const keyboard = document.getElementsByClassName("keyboard")[0];
-  root.style.setProperty("--height", height);
-  
   const root = document.querySelector(':root');
+  root.style.setProperty("--width-keyboard", 0);
 
-  const bottom = document.getElementsByClassName("bottom")[0];
+  const height = window.innerHeight;
+  root.style.setProperty("--height",height);
   
+  const bottom = document.getElementsByClassName("bottom")[0];
+  const keyboard = document.getElementsByClassName("keyboard")[0];
+  if( (bottom.clientWidth / bottom.clientHeight) > (880 / 220) ){ 
+    keyboard.style.width = "100%";
+    keyboard.style.height = "";
+  }
+  else {
+    keyboard.style.width = "";
+    keyboard.style.height = "100%";
+  }
 
-  const height = window.innerHeight + "px";
-  root.style.setProperty("--height", height);
+  const width_keyboard = keyboard.clientWidth + "px";
+  root.style.setProperty("--width-keyboard", width_keyboard);
+})
+
+// ロードしたときに画面を合わせる
+window.addEventListener("resize",function () {
+  const root = document.querySelector(':root');
+  root.style.setProperty("--width-keyboard", 0);
+
+  const height = window.innerHeight;
+  root.style.setProperty("--height",height);
+  
+  const bottom = document.getElementsByClassName("bottom")[0];
+  const keyboard = document.getElementsByClassName("keyboard")[0];
+  if( (bottom.clientWidth / bottom.clientHeight) > (880 / 220) ){ 
+    keyboard.style.width = "100%";
+    keyboard.style.height = "";
+  }
+  else {
+    keyboard.style.width = "";
+    keyboard.style.height = "100%";
+  }
+
+  const width_keyboard = keyboard.clientWidth + "px";
+  root.style.setProperty("--width-keyboard", width_keyboard);
 })
 
 let touchkey = {}; // タッチしたキーを保存する配列
