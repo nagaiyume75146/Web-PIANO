@@ -232,6 +232,6 @@ span {
     bottom: 0;
     width: var(--width-whiteKey);
     height: var(--width-whiteKey);
-    font-size: 2rem;
+    font-size: 1.7rem;
     font-family: 'EB Garamond', serif;
 }
