@@ -109,6 +109,14 @@ if( touch_event !== undefined && 0 < touch_points ) {
         document.getElementById(scale).classList.add("whiteKey-active");
       }
     })
+
+    whiteKey[i].addEventListener("mouseup",function() {
+      const scale = scale_Array[whiteKey_Array[i]];
+      if(presskey[scale]) {
+        presskey[scale] = false;
+        document.getElementById(scale).classList.remove("whiteKey-active");
+      }
+    })
   }
 
   const blackKey = document.querySelectorAll(".blackKey");
@@ -119,6 +127,14 @@ if( touch_event !== undefined && 0 < touch_points ) {
         presskey[scale] = true;
         play(scale)
         document.getElementById(scale).classList.add("blackKey-active");
+      }
+    })
+
+    blackKey[i].addEventListener("mouseup",function() {
+      const scale = scale_Array[blackKey_Array[i]];
+      if(presskey[scale]) {
+        presskey[scale] = false;
+        document.getElementById(scale).classList.remove("blackKey-active");
       }
     })
   }
