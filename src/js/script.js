@@ -33,7 +33,7 @@ window.addEventListener("load",function () {
   const height_keyboard = document.getElementsByClassName("keyboard")[0].clientHeight + "px";
   root.style.setProperty("--height-keyboard", height_keyboard);
 
-  setTimeout(function(){ location.reload();; },75);
+  setTimeout(function(){ location.reload(); },75);
 })
 
 // リサイズしたときに画面を合わせる
