@@ -91,6 +91,7 @@ body {
 
 .keyboard {
     aspect-ratio: 880 / 300;
+    user-select: none;
 }
 
 .keyName {
