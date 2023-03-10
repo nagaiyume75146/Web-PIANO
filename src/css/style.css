@@ -11,23 +11,19 @@
 }
 
 :root {
-    --height: calc( calc( 100vh / 2 ) - 6px ); /*354px*/
+    --size-icon: calc( calc( calc( calc( 100vh / 2 ) - 6px ) / 2 ) * calc( 50 / 177 ) ); /*50px*/
 
-    --width-whiteKey: calc( 100vw * calc( 40 / 1280 ) ); /*40px*/
-    --height-whiteKey: calc( var(--height) * calc( 220 / 354 ) ); /*220px*/
-    --height-whiteKey-active: calc( var(--height) * calc( 216 / 354 ) ); /*220px*/
+    --height: 0;
 
-    --width-blackKey: calc( var(--width-whiteKey) * calc( 24 / 40 ) ); /*24px*/
-    --height-blackKey: calc( var(--height) * calc( 130 / 354 ) ); /*130px*/
+    --width-whiteKey: calc( var(--height) * calc( 40 / 300 ) ); /*40px*/
+    --height-whiteKey: calc( var(--height) * calc( 220 / 300 ) ); /*220px*/
+    --height-whiteKey-active: calc( var(--height-whiteKey) - 4 ); /*216px*/
+
+    --width-blackKey: calc( var(--height) * calc( 24 / 300 ) ); /*24px*/
+    --height-blackKey: calc( var(--height) * calc( 130 / 300 ) ); /*130px*/
     --margin-blackKey: calc( var(--width-blackKey) / -2 ); /*-12px*/
 
     --margin-blackKeyName: calc( var(--width-whiteKey) / 2 ); /*20px*/
-
-    --width-key: calc( var(--width-whiteKey) * 22 ); /*880px*/
-
-    --height-keyboard: calc( var(--height-whiteKey) + calc( var(--width-whiteKey) * 2 ) ); /*300px*/
-
-    --size-icon: calc( calc( var(--height) / 2 ) * calc( 50 / 177 ) ); /*50px*/
 }
 
 html {
@@ -94,13 +90,12 @@ body {
 }
 
 .keyboard {
-    width: var(--width-key);
-    height: var(--height-keyboard);
+    aspect-ratio: 880 / 300;
 }
 
 .keyName {
     display: flex;
-    width: var(--width-key);
+    width: 100%;
     height: var(--width-whiteKey);
 }
 
@@ -152,7 +147,7 @@ body {
 
 .key {
     display: flex;
-    width: var(--width-key);
+    width: 100%;
     height: var(--height-whiteKey);
 }
 

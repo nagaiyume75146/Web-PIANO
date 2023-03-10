@@ -11,8 +11,49 @@
   ・boolean系(true/false):is〇〇(受動態)
 */
 
+window.addEventListener("load",function (params) {
+  const root = document.querySelector(':root');
+  root.style.setProperty("--height", 0);
+  
+  const bottom = document.getElementsByClassName("bottom")[0];
+  const keyboard = document.getElementsByClassName("keyboard")[0];
+  if( (bottom.clientWidth / bottom.clientHeight) > (880 / 330) ){ 
+    keyboard.style.width = "";
+    keyboard.style.height = "100%";
+  }
+  else {
+    keyboard.style.width = "100%";
+    keyboard.style.height = "";
+  }
+
+  const height = document.getElementsByClassName("keyboard")[0].clientHeight + "px";
+  root.style.setProperty("--height", height);
+})
+
+window.addEventListener("resize",function () {
+  const root = document.querySelector(':root');
+  root.style.setProperty("--height", 0);
+
+  const bottom = document.getElementsByClassName("bottom")[0];
+  const keyboard = document.getElementsByClassName("keyboard")[0];
+  if( (bottom.clientWidth / bottom.clientHeight) > (880 / 330) ){ 
+    keyboard.style.width = "";
+    keyboard.style.height = "100%";
+  }
+  else {
+    keyboard.style.width = "100%";
+    keyboard.style.height = "";
+  }
+
+  const height = document.getElementsByClassName("keyboard")[0].clientHeight + "px";
+  root.style.setProperty("--height", height);
+})
+
 let presskey = {};
 let audio = {};
+
+const whiteKey_Array = ["q","w","e","r","t","y","u","i","o","p","@","[","z","x","c","v","b","n","m",",",".","/"];
+const blackKey_Array = ["2","3","5","6","7","9","0","^","a","s","f","g","j","k","l"];
 
 const scale_Array = {
   "q" : "C3",
@@ -55,32 +96,79 @@ const scale_Array = {
   "l" : "B♭5",
 };
 
-document.onkeydown = function(event) {
-  const scale = scale_Array[event.key];
-  if(presskey[scale] != true) {
-    presskey[scale] = true;
-    play(scale)
+const touch_event = window.ontouchstart;
+const touch_points = navigator.maxTouchPoints;
+if( touch_event !== undefined && 0 < touch_points ) {
+  const whiteKey = document.querySelectorAll(".whiteKey");
+  for(let i=0; i<21; i++) {
+    whiteKey[i].addEventListener("mousedown",function() {
+      const scale = scale_Array[whiteKey_Array[i]];
+      if(presskey[scale] != true) {
+        presskey[scale] = true;
+        play(scale)
+        document.getElementById(scale).classList.add("whiteKey-active");
+      }
+    })
 
-    if(scale.length==2) {
-      document.getElementById(scale).classList.add("whiteKey-active");
-    }
-    else {
-      document.getElementById(scale).classList.add("blackKey-active");
-    }
+    whiteKey[i].addEventListener("mouseup",function() {
+      const scale = scale_Array[whiteKey_Array[i]];
+      if(presskey[scale]) {
+        presskey[scale] = false;
+        pause(scale)
+        document.getElementById(scale).classList.remove("whiteKey-active");
+      }
+    })
+  }
+
+  const blackKey = document.querySelectorAll(".blackKey");
+  for(let i=0; i<14; i++) {
+    blackKey[i].addEventListener("mousedown",function() {
+      const scale = scale_Array[blackKey_Array[i]];
+      if(presskey[scale] != true) {
+        presskey[scale] = true;
+        play(scale)
+        document.getElementById(scale).classList.add("blackKey-active");
+      }
+    })
+
+    blackKey[i].addEventListener("mouseup",function() {
+      const scale = scale_Array[blackKey_Array[i]];
+      if(presskey[scale]) {
+        presskey[scale] = false;
+        pause(scale)
+        document.getElementById(scale).classList.remove("blackKey-active");
+      }
+    })
   }
 }
-
-document.onkeyup = function(event) {
-  const scale = scale_Array[event.key];
-  if(presskey[scale]) {
-    presskey[scale] = false;
-    pause(scale)
-
-    if(scale.length == 2) {
-      document.getElementById(scale).classList.remove("whiteKey-active");
+else {
+  document.onkeydown = function(event) {
+    const scale = scale_Array[event.key];
+    if(presskey[scale] != true) {
+      presskey[scale] = true;
+      play(scale)
+  
+      if(scale.length==2) {
+        document.getElementById(scale).classList.add("whiteKey-active");
+      }
+      else {
+        document.getElementById(scale).classList.add("blackKey-active");
+      }
     }
-    else {
-      document.getElementById(scale).classList.remove("blackKey-active");
+  }
+  
+  document.onkeyup = function(event) {
+    const scale = scale_Array[event.key];
+    if(presskey[scale]) {
+      presskey[scale] = false;
+      pause(scale)
+  
+      if(scale.length == 2) {
+        document.getElementById(scale).classList.remove("whiteKey-active");
+      }
+      else {
+        document.getElementById(scale).classList.remove("blackKey-active");
+      }
     }
   }
 }
