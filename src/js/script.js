@@ -57,10 +57,6 @@ window.addEventListener("resize",function () {
   root.style.setProperty("--height-keyboard", height_keyboard);
 })
 
-window.addEventListener("orientationchange", () => {
-  setTimeout(function(){ location.reload(); },75);
-});
-
 let presskey = {}; // 押したキーを保存する配列
 let mousekey = {}; // マウスで押したキーを保存する配列
 let audio = {}; // 音を保存する配列
