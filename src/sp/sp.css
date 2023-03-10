@@ -11,9 +11,23 @@
 }
 
 :root {
+    --width: 100vw;
     --height: 0;
 
-    --height-top: calc( var(--height))
+    --width-top: calc( calc( var(--width) / 10) * 2 );
+    --width-bottom: calc( calc( var(--width) / 10) * 8 );
+
+    --width-keyboard: 0;
+
+    --width-whiteKey: var(--width-keyboard); /*220px*/
+    --width-whiteKey-active: calc( var(--width-keyboard) * calc( 216 / 220 ) ); /*216px*/
+    --height-whiteKey: calc( var(--width-keyboard) * calc( 40 / 220 ) ); /*40px*/
+
+    --width-blackKey: calc( var(--width-keyboard) * calc( 130 / 220 ) ); /*130px*/
+    --height-blackKey: calc( var(--width-keyboard) * calc( 24 / 220 ) ); /*24px*/
+    --margin-blackKey: calc( var(--width-blackKey) / -2 ); /*-12px*/
+
+    --margin-blackKeyName: calc( var(--width-whiteKey) / 2 ); /*20px*/
 }
 
 html {
@@ -25,6 +39,12 @@ body {
     overflow: hidden;
 }
 
+.piano {
+    display: flex;
+    width: var(--width);
+    height: var(--height);
+}
+
 .top {
     width: var(--width-top);
     height: var(--height);
@@ -34,6 +54,7 @@ body {
     border-top: solid 2px #333;
     border-radius:5px 5px 5px 5px; 
     box-sizing: border-box;
+    background: #000;
 }
 
 .icon-back {
@@ -51,7 +72,7 @@ body {
 }
 
 .bottom {
-    width: var(--width-top);
+    width: var(--width-bottom);
     height: var(--height);
     border-right: solid 2px #333;
     border-bottom: solid 2px #333;
@@ -59,13 +80,15 @@ body {
     border-top: solid 2px #333;
     border-radius:5px 5px 5px 5px; 
     box-sizing: border-box;
+    background: #000;
 }
 
 .keyboard {
-    aspect-ratio: 880 / 300;
-    user-select: none;
+    aspect-ratio: 220 / 880;
+    background-color: red;
 }
 
+/*
 .whiteKey {
     position: relative;
     width: var(--width-whiteKey);
@@ -146,4 +169,4 @@ span {
     height: var(--width-whiteKey);
     font-size: 2rem;
     font-family: 'EB Garamond', serif;
-}
+}*/
