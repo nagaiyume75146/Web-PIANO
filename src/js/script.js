@@ -11,6 +11,7 @@
   ・boolean系(true/false):is〇〇(受動態)
 */
 
+// ロードしたときに画面を合わせる
 window.addEventListener("load",function (params) {
   const root = document.querySelector(':root');
   root.style.setProperty("--height", 0);
@@ -30,6 +31,7 @@ window.addEventListener("load",function (params) {
   root.style.setProperty("--height", height);
 })
 
+// リサイズしたときに画面を合わせる
 window.addEventListener("resize",function () {
   const root = document.querySelector(':root');
   root.style.setProperty("--height", 0);
@@ -49,13 +51,15 @@ window.addEventListener("resize",function () {
   root.style.setProperty("--height", height);
 })
 
-let presskey = {};
-let mousekey = {};
-let audio = {};
+let presskey = {}; // 押したキーを保存する配列
+let mousekey = {}; // マウスで押したキーを保存する配列
+let audio = {}; // 音を保存する配列
 
+// 押すキーの配列
 const whiteKey_Array = ["q","w","e","r","t","y","u","i","o","p","@","[","z","x","c","v","b","n","m",",",".","/"];
 const blackKey_Array = ["2","3","5","6","7","9","0","^","a","s","f","g","j","k","l"];
 
+// 押したキー→音程の配列
 const scale_Array = {
   "q" : "C3",
   "w" : "D3",
@@ -97,11 +101,14 @@ const scale_Array = {
   "l" : "B♭5",
 };
 
+// タッチデバイスか判定
 const touch_event = window.ontouchstart;
 const touch_points = navigator.maxTouchPoints;
 if( touch_event !== undefined && 0 < touch_points ) {
 
   const whiteKey = document.querySelectorAll(".whiteKey");
+
+  // 白鍵をタッチしたときの関数
   for(let i=0; i<22; i++) {
     whiteKey[i].addEventListener("touchstart",function(){
       const scale = scale_Array[whiteKey_Array[i]];
@@ -115,6 +122,7 @@ if( touch_event !== undefined && 0 < touch_points ) {
     });
   }
 
+  // 白鍵から離れたときの関数
   for(let i=0; i<22; i++) {
     whiteKey[i].addEventListener("touchend",function(){
       const scale = scale_Array[whiteKey_Array[i]];
@@ -128,6 +136,7 @@ if( touch_event !== undefined && 0 < touch_points ) {
     });
   }
 
+  // 黒鍵をタッチしたときの関数
   const blackKey = document.querySelectorAll(".blackKey");
   for(let i=0; i<15; i++) {
     blackKey[i].addEventListener("touchstart",function(){
@@ -144,6 +153,7 @@ if( touch_event !== undefined && 0 < touch_points ) {
     });
   }
 
+  // / 黒鍵から離れたときの関数
   for(let i=0; i<15; i++) {
     blackKey[i].addEventListener("touchend",function(){
       const scale = scale_Array[blackKey_Array[i]];
@@ -160,6 +170,7 @@ if( touch_event !== undefined && 0 < touch_points ) {
 }
 else {
 
+  // キーで押したときの関数
   document.onkeydown = function(event) {
     const scale = scale_Array[event.key];
     if(scale) {
@@ -176,7 +187,8 @@ else {
       }
     }
   }
-  
+
+  // キーで離れたの関数
   document.onkeyup = function(event) {
     const scale = scale_Array[event.key];
     if(scale) {
@@ -194,6 +206,7 @@ else {
     }  
   }
 
+  // 白鍵をマウスで押したときの関数
   const whiteKey = document.querySelectorAll(".whiteKey");
   for(let i=0; i<22; i++) {
     whiteKey[i].addEventListener("mousedown",function(){
@@ -208,6 +221,7 @@ else {
     });
   }
 
+  // 白鍵でマウスが離れたときの関数
   for(let i=0; i<22; i++) {
     whiteKey[i].addEventListener("mouseup",function(){
       const scale = scale_Array[whiteKey_Array[i]];
@@ -221,6 +235,7 @@ else {
     });
   }
 
+  // 黒鍵をマウスで押したときの関数
   const blackKey = document.querySelectorAll(".blackKey");
   for(let i=0; i<15; i++) {
     blackKey[i].addEventListener("mousedown",function(){
@@ -237,6 +252,7 @@ else {
     });
   }
 
+  // 黒鍵でマウスが離れたときの関数
   for(let i=0; i<15; i++) {
     blackKey[i].addEventListener("mouseup",function(){
       const scale = scale_Array[blackKey_Array[i]];
