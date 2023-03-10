@@ -110,7 +110,7 @@ if( touch_event !== undefined && 0 < touch_points ) {
       }
     })
 
-    whiteKey[i].addEventListener("touchebd",function() {
+    whiteKey[i].addEventListener("touchend",function() {
       const scale = scale_Array[whiteKey_Array[i]];
       if(presskey[scale]) {
         presskey[scale] = false;
