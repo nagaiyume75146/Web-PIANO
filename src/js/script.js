@@ -56,6 +56,7 @@ window.addEventListener("resize",function () {
   const height_keyboard = document.getElementsByClassName("keyboard")[0].clientHeight + "px";
   root.style.setProperty("--height-keyboard", height_keyboard);
 })
+
 window.addEventListener("orientationchange", () => {
   setTimeout(function(){ location.reload(); },75);
 });
