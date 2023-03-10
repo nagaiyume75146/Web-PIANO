@@ -57,6 +57,7 @@ body {
     background: #000;
 }
 
+/*
 .icon-back {
     display: flex;
     justify-content: center;
@@ -69,9 +70,12 @@ body {
     width: var(--size-icon);
     height: var(--size-icon);
     cursor: pointer;
-}
+}*/
 
 .bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: var(--width-bottom);
     height: var(--height);
     border-right: solid 2px #333;
@@ -88,7 +92,6 @@ body {
     background-color: red;
 }
 
-/*
 .whiteKey {
     position: relative;
     width: var(--width-whiteKey);
@@ -101,6 +104,7 @@ body {
     background:#fff;
 }
 
+/*
 .whiteKey-active {
     display: inline-block;
     position: relative;
@@ -134,7 +138,7 @@ body {
     border-color:transparent rgba(0,0,0,0.1) transparent transparent;
     content:"";
 }
-
+*/
 .blackKey {
     position:relative;
     z-index: 1;
@@ -150,6 +154,7 @@ body {
     background:linear-gradient(-20deg,#333,#000,#333);
 }
 
+/*
 .blackKey-active {
     height: var(--height-blackKey);
     border-width:7px 2px 1px;

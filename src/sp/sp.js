@@ -18,7 +18,7 @@ window.addEventListener("load",function () {
   const root = document.querySelector(':root');
   root.style.setProperty("--width-keyboard", 0);
 
-  const height = window.innerHeight;
+  const height = window.innerHeight + "px";
   root.style.setProperty("--height",height);
   
   const bottom = document.getElementsByClassName("bottom")[0];
@@ -36,12 +36,12 @@ window.addEventListener("load",function () {
   root.style.setProperty("--width-keyboard", width_keyboard);
 })
 
-// ロードしたときに画面を合わせる
+// リサイズしたときに画面を合わせる
 window.addEventListener("resize",function () {
   const root = document.querySelector(':root');
   root.style.setProperty("--width-keyboard", 0);
 
-  const height = window.innerHeight;
+  const height = window.innerHeight + "px";
   root.style.setProperty("--height",height);
   
   const bottom = document.getElementsByClassName("bottom")[0];
@@ -56,6 +56,7 @@ window.addEventListener("resize",function () {
   }
 
   const width_keyboard = keyboard.clientWidth + "px";
+  console.log(width_keyboard);
   root.style.setProperty("--width-keyboard", width_keyboard);
 })
 
