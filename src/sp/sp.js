@@ -56,7 +56,6 @@ window.addEventListener("resize",function () {
   }
 
   const width_keyboard = keyboard.clientWidth + "px";
-  console.log(width_keyboard);
   root.style.setProperty("--width-keyboard", width_keyboard);
 })
 
