@@ -166,6 +166,8 @@ else {
       if(presskey[scale] != true) {
         presskey[scale] = true;
         play(scale)
+        console.log(scale)
+        console.log(document.getElementById(scale));
     
         if(scale.length==2) {
           document.getElementById(scale).classList.add("whiteKey-active");
