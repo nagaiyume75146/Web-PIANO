@@ -50,57 +50,11 @@ window.addEventListener("resize",function () {
 
   const height = document.getElementsByClassName("keyboard")[0].clientHeight + "px";
   root.style.setProperty("--height", height);
-})
+})*/
 
-let presskey = {}; // 押したキーを保存する配列
+let touchkey = {}; // 押したキーを保存する配列
 let mousekey = {}; // マウスで押したキーを保存する配列
 let audio = {}; // 音を保存する配列
-
-// 押すキーの配列
-const whiteKey_Array = ["q","w","e","r","t","y","u","i","o","p","@","[","z","x","c","v","b","n","m",",",".","/"];
-const blackKey_Array = ["2","3","5","6","7","9","0","^","a","s","f","g","j","k","l"];
-
-// 押したキー→音程の配列
-const scale_Array = {
-  "q" : "C3",
-  "w" : "D3",
-  "e" : "E3",
-  "r" : "F3",
-  "t" : "G3",
-  "y" : "A3",
-  "u" : "B3",
-  "i" : "C4",
-  "o" : "D4",
-  "p" : "E4",
-  "@" : "F4",
-  "[" : "G4",
-  "z" : "A4",
-  "x" : "B4",
-  "c" : "C5",
-  "v" : "D5",
-  "b" : "E5",
-  "n" : "F5",
-  "m" : "G5",
-  "," : "A5",
-  "." : "B5",
-  "/" : "C6",
-
-  "2" : "D♭3",
-  "3" : "E♭3",
-  "5" : "G♭3",
-  "6" : "A♭3",
-  "7" : "B♭3",
-  "9" : "D♭4",
-  "0" : "E♭4",
-  "^" : "G♭4",
-  "a" : "A♭4",
-  "s" : "B♭4",
-  "f" : "D♭5",
-  "g" : "E♭5",
-  "j" : "G♭5",
-  "k" : "A♭5",
-  "l" : "B♭5",
-};
 
 const whiteKey = document.querySelectorAll(".whiteKey");
 
