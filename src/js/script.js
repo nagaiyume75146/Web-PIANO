@@ -60,7 +60,7 @@ window.addEventListener("resize",function () {
 })
 
 screen.addEventListener("orientationchange", () => {
-  setTimeout(function(){ location.href = "/"; },1);
+  setTimeout(function(){ location.href = "/"; },75);
 });
 
 let presskey = {}; // 押したキーを保存する配列
