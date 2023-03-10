@@ -129,7 +129,7 @@ if( touch_event !== undefined && 0 < touch_points ) {
 
   const blackKey = document.querySelectorAll(".blackKey");
   for(let i=0; i<15; i++) {
-    blackKey[i].addEventListener("mousedown",function(){
+    blackKey[i].addEventListener("touchstart",function(){
       console.log("black")
 
       const scale = scale_Array[blackKey_Array[i]];
@@ -144,7 +144,7 @@ if( touch_event !== undefined && 0 < touch_points ) {
   }
 
   for(let i=0; i<15; i++) {
-    blackKey[i].addEventListener("mouseup",function(){
+    blackKey[i].addEventListener("touchend",function(){
       const scale = scale_Array[blackKey_Array[i]];
       if(scale) {
         if(presskey[scale]) {
