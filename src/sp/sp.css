@@ -1,0 +1,235 @@
+/*
+    CSSプロパティの書き順
+    https://zenn.dev/web_tips/articles/f1167f4314dcb3
+    Font:EB Garamond
+    https://fonts.google.com/specimen/EB+Garamond?category=Serif,Display,Monospace
+*/
+
+@font-face {
+    font-family: 'EB Garamond', serif;
+    src: url("../font/EB_Garamond/EBGaramond-VariableFont_wght.ttf");
+}
+
+:root {
+    --size-icon: calc( calc( calc( calc( 100vh / 2 ) - 6px ) / 2 ) * calc( 50 / 177 ) ); /*50px*/
+
+    --height: 0;
+
+    --width-whiteKey: calc( var(--height) * calc( 40 / 300 ) ); /*40px*/
+    --height-whiteKey: calc( var(--height) * calc( 220 / 300 ) ); /*220px*/
+    --height-whiteKey-active: calc( var(--height) * calc( 216 / 300 ) ); /*216px*/
+
+    --width-blackKey: calc( var(--height) * calc( 24 / 300 ) ); /*24px*/
+    --height-blackKey: calc( var(--height) * calc( 130 / 300 ) ); /*130px*/
+    --margin-blackKey: calc( var(--width-blackKey) / -2 ); /*-12px*/
+
+    --margin-blackKeyName: calc( var(--width-whiteKey) / 2 ); /*20px*/
+}
+
+html {
+    font-size: 62.5%; /*ベースを10pxにする*/
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+.top {
+    width: 100vw;
+    height: calc( ( 100vh / 2 ) - 6px );
+    border-right: solid 2px #333;
+    border-bottom: solid 2px #333;
+    border-left: solid 2px #333;
+    border-radius:0 0 5px 5px; 
+    box-shadow:0 2px 0px #666,0 3px 0px #555,0 4px 0px #444,0 6px 6px #000,inset 0 -1px 1px rgba(255,255,255,0.5),inset 0 -4px 5px #000;
+    box-sizing: border-box;
+    background:-webkit-linear-gradient(-60deg,#000,#333,#000,#333 75%);
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: calc( 100% / 2 );
+    color: gold;
+    font-size: 8rem;
+    font-family: 'EB Garamond', serif;
+}
+
+.icon-back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: calc( 100% / 2 );
+}
+
+.icon {
+    width: var(--size-icon);
+    height: var(--size-icon);
+    cursor: pointer;
+}
+
+.bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: calc( ( 100vh / 2 ) - 6px );
+    margin-top: 5px;
+    border-right: solid 2px #333;
+    border-bottom: solid 2px #333;
+    border-left: solid 2px #333;
+    border-radius:0 0 5px 5px; 
+    box-shadow:0 2px 0px #666,0 3px 0px #555,0 4px 0px #444,0 6px 6px #000,inset 0 -1px 1px rgba(255,255,255,0.5),inset 0 -4px 5px #000;
+    box-sizing: border-box;
+    background:-webkit-linear-gradient(-60deg,#000,#333,#000,#333 75%);
+    
+}
+
+.keyboard {
+    aspect-ratio: 880 / 300;
+    user-select: none;
+}
+
+.keyName {
+    display: flex;
+    width: 100%;
+    height: var(--width-whiteKey);
+}
+
+.whiteKeyName {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--width-whiteKey);
+    height: var(--width-whiteKey);
+    color: gold;
+    font-size: 2rem;
+    font-family: 'EB Garamond', serif;
+}
+
+.blackKeyName-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--width-whiteKey);
+    height: var(--width-whiteKey);
+    margin-left: var(--margin-blackKeyName);
+    color: gold;
+    font-size: 2rem;
+    font-family: 'EB Garamond', serif;
+}
+
+.blackKeyName-middle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--width-whiteKey);
+    height: var(--width-whiteKey);
+    color: gold;
+    font-size: 2rem;
+    font-family: 'EB Garamond', serif;
+}
+
+.blackKeyName-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--width-whiteKey);
+    height: var(--width-whiteKey);
+    margin-right: var(--margin-blackKeyName);
+    color: gold;
+    font-size: 2rem;
+    font-family: 'EB Garamond', serif;
+}
+
+.key {
+    display: flex;
+    width: 100%;
+    height: var(--height-whiteKey);
+}
+
+.whiteKey {
+    position: relative;
+    width: var(--width-whiteKey);
+    height: var(--height-whiteKey);
+    padding: 0;
+    border:solid 1px #ccc;
+    border-radius:0 0 3px 3px; 
+    box-shadow:inset 0 1px 0px #fff,inset 0 -1px 0px #fff,inset 1px 0px 0px #fff,inset -1px 0px 0px #fff,0 0 3px rgba(0,0,0,0.7);
+    box-sizing: border-box;
+    background:#fff;
+}
+
+.whiteKey-active {
+    display: inline-block;
+    position: relative;
+    height:var(--height-whiteKey-active);
+    border-top: 4px solid #666;
+    box-shadow:0 2px 2px rgba(0,0,0,0.4);
+    -webkit-box-shadow:0 2px 2px rgba(0,0,0,0.4);
+    -moz-box-shadow:0 2px 2px rgba(0,0,0,0.4);
+}
+  
+.whiteKey-active::before {
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:0px;
+    height:0px;
+    border-width: var(--height-whiteKey-active) 5px 0px;
+    border-style:solid;
+    border-color:transparent transparent transparent rgba(0,0,0,0.1);
+    content:"";
+}
+
+.whiteKey-active::after {
+    position:absolute;
+    top:0px;
+    right:0px;
+    width:0px;
+    height:0px;
+    border-width: var(--height-whiteKey-active) 5px 0px;
+    border-style:solid;
+    border-color:transparent rgba(0,0,0,0.1) transparent transparent;
+    content:"";
+}
+
+.blackKey {
+    position:relative;
+    z-index: 1;
+    width: var(--width-blackKey);
+    height: var(--height-blackKey);
+    margin: 0 var(--margin-blackKey);
+    border-width:1px 2px 7px;
+    border-style:solid;
+    border-color:#666 #222 #111 #555; 
+    border-radius:0 0 2px 2px;
+    box-shadow:inset 0px -1px 2px rgba(255,255,255,0.4),0 2px 3px rgba(0,0,0,0.4);
+    box-sizing: border-box;
+    background:linear-gradient(-20deg,#333,#000,#333);
+}
+
+.blackKey-active {
+    height: var(--height-blackKey);
+    border-width:7px 2px 1px;
+    border-top-color: #3c3c3c;
+    box-shadow:inset 0px -1px 1px rgba(255,255,255,0.4),0 1px 0px rgba(0,0,0,0.8),0 2px 2px rgba(0,0,0,0.4),0 -1px 0px #000;
+    -webkit-box-shadow:inset 0px -1px 1px rgba(255,255,255,0.4),0 1px 0px rgba(0,0,0,0.8),0 2px 2px rgba(0,0,0,0.4),0 -1px 0px #000;
+    -moz-box-shadow:inset 0px -1px 1px rgba(255,255,255,0.4),0 1px 0px rgba(0,0,0,0.8),0 2px 2px rgba(0,0,0,0.4),0 -1px 0px #000;
+}
+
+span {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: var(--width-whiteKey);
+    height: var(--width-whiteKey);
+    font-size: 2rem;
+    font-family: 'EB Garamond', serif;
+}
