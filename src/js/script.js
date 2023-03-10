@@ -120,8 +120,8 @@ if( touch_event !== undefined && 0 < touch_points ) {
       if(scale) {
         if(presskey[scale]) {
           presskey[scale] = false;
-          pause(scale)
           document.getElementById(scale).classList.remove("whiteKey-active");
+          audio[scale] = false;
         }
       }
     });
@@ -147,8 +147,8 @@ if( touch_event !== undefined && 0 < touch_points ) {
       if(scale) {
         if(presskey[scale]) {
           presskey[scale] = false;
-          pause(scale)
           document.getElementById(scale).classList.remove("blackKey-active");
+          audio[scale] = false;
         }
       }
     });
