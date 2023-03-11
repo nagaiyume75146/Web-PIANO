@@ -55,6 +55,17 @@ window.addEventListener("resize", function() {
     root.style.setProperty("--size-icon", size_icon);
 })
 
+function orientCheck(){
+    //画面の向きを 0,90,180,-90 のいずれかで取得
+    var orientation = window.orientation;
+
+    if (orientation === 0) {
+        /*  縦画面時の処理  */
+    } else {
+        /*  横画面時の処理  */
+  }
+};
+
 let touchkey = {}; // タッチしたキーを保存する配列
 let audio = {}; // 音を保存する配列
 
