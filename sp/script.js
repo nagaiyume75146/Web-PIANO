@@ -42,9 +42,7 @@ window.addEventListener("resize", function() {
     }
 
     let span_height = document.getElementsByTagName("span")[0].clientHeight;
-    console.log(span_height)
     span_height = String(span_height / 2) + "px";
-    console.log(span_height)
     const root = document.querySelector(':root');
     root.style.setProperty("--font-size2", span_height);
 })
