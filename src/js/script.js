@@ -64,7 +64,6 @@ window.addEventListener("resize",function () {
 
   if (window.matchMedia && window.matchMedia('(max-device-width: 640px)').matches) {
     location.href = "https://nagaiyume75146.github.io/Web-PIANO/sp/";
-    alert("スマホです")
   }
 })
 
