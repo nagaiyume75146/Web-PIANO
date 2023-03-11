@@ -171,7 +171,7 @@ blackKey[i].addEventListener("touchend",function(){
 
 //ピアノの音を流す関数
 function play(scale){
-  let file = "src/audio/" + scale + "." + "mp3";
+  let file = "../src/audio/" + scale + "." + "mp3";
   
   audio[scale] = new Audio(file);
   audio[scale].volume = 50 * 0.01;
