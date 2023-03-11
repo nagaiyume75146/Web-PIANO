@@ -60,9 +60,9 @@ function orientCheck(){
     var orientation = window.orientation;
 
     if (orientation === 0) {
-        /*  縦画面時の処理  */
+        alert("横画面を推奨しています。")
     } else {
-        /*  横画面時の処理  */
+        console.log();
   }
 };
 
