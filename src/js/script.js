@@ -61,6 +61,11 @@ window.addEventListener("resize",function () {
 
   const height_keyboard = document.getElementsByClassName("keyboard")[0].clientHeight + "px";
   root.style.setProperty("--height-keyboard", height_keyboard);
+
+  if (window.matchMedia && window.matchMedia('(max-device-width: 640px)').matches) {
+    location.href = "https://nagaiyume75146.github.io/Web-PIANO/sp/";
+    alert("スマホです")
+  }
 })
 
 let presskey = {}; // 押したキーを保存する配列
@@ -113,171 +118,159 @@ const scale_Array = {
   "l" : "B♭5",
 };
 
-// タッチデバイスか判定
-const touch_event = window.ontouchstart;
-const touch_points = navigator.maxTouchPoints;
-if( touch_event !== undefined && 0 < touch_points ) {
+const whiteKey = document.querySelectorAll(".whiteKey");
+const blackKey = document.querySelectorAll(".blackKey");
 
-  const whiteKey = document.querySelectorAll(".whiteKey");
-
-  // 白鍵をタッチしたときの関数
-  for(let i=0; i<22; i++) {
-    whiteKey[i].addEventListener("touchstart",function(){
-      const scale = scale_Array[whiteKey_Array[i]];
-      if(scale) {
-        if(presskey[scale] != true) {
-          presskey[scale] = true;
-          play(scale)
-          document.getElementById(scale).classList.add("whiteKey-active");
-        }
-      }
-    });
-  }
-
-  // 白鍵から離れたときの関数
-  for(let i=0; i<22; i++) {
-    whiteKey[i].addEventListener("touchend",function(){
-      const scale = scale_Array[whiteKey_Array[i]];
-      if(scale) {
-        if(presskey[scale]) {
-          presskey[scale] = false;
-          document.getElementById(scale).classList.remove("whiteKey-active");
-          audio[scale] = false;
-        }
-      }
-    });
-  }
-
-  // 黒鍵をタッチしたときの関数
-  const blackKey = document.querySelectorAll(".blackKey");
-  for(let i=0; i<15; i++) {
-    blackKey[i].addEventListener("touchstart",function(){
-      console.log("black")
-
-      const scale = scale_Array[blackKey_Array[i]];
-      if(scale) {
-        if(presskey[scale] != true) {
-          presskey[scale] = true;
-          play(scale)
-          document.getElementById(scale).classList.add("blackKey-active");
-        }
-      }
-    });
-  }
-
-  // 黒鍵から離れたときの関数
-  for(let i=0; i<15; i++) {
-    blackKey[i].addEventListener("touchend",function(){
-      const scale = scale_Array[blackKey_Array[i]];
-      if(scale) {
-        if(presskey[scale]) {
-          presskey[scale] = false;
-          document.getElementById(scale).classList.remove("blackKey-active");
-          audio[scale] = false;
-        }
-      }
-    });
-  }
-
-}
-else {
-
-  // キーで押したときの関数
-  document.onkeydown = function(event) {
-    const scale = scale_Array[event.key];
+// 白鍵をタッチしたときの関数
+for(let i=0; i<22; i++) {
+  whiteKey[i].addEventListener("touchstart",function(){
+    const scale = scale_Array[whiteKey_Array[i]];
     if(scale) {
       if(presskey[scale] != true) {
         presskey[scale] = true;
         play(scale)
-    
-        if(scale.length==2) {
-          document.getElementById(scale).classList.add("whiteKey-active");
-        }
-        else {
-          document.getElementById(scale).classList.add("blackKey-active");
-        }
+        document.getElementById(scale).classList.add("whiteKey-active");
       }
     }
-  }
+  });
+}
 
-  // キーで離れたの関数
-  document.onkeyup = function(event) {
-    const scale = scale_Array[event.key];
+// 白鍵から離れたときの関数
+for(let i=0; i<22; i++) {
+  whiteKey[i].addEventListener("touchend",function(){
+    const scale = scale_Array[whiteKey_Array[i]];
     if(scale) {
       if(presskey[scale]) {
         presskey[scale] = false;
-        pause(scale)
-    
-        if(scale.length == 2) {
-          document.getElementById(scale).classList.remove("whiteKey-active");
-        }
-        else {
-          document.getElementById(scale).classList.remove("blackKey-active");
-        }
+        document.getElementById(scale).classList.remove("whiteKey-active");
+        audio[scale] = false;
       }
-    }  
-  }
+    }
+  });
+}
 
-  // 白鍵をマウスで押したときの関数
-  const whiteKey = document.querySelectorAll(".whiteKey");
-  for(let i=0; i<22; i++) {
-    whiteKey[i].addEventListener("mousedown",function(){
-      const scale = scale_Array[whiteKey_Array[i]];
-      if(scale) {
-        if(mousekey[scale] != true) {
-          mousekey[scale] = true;
-          play(scale)
-          document.getElementById(scale).classList.add("whiteKey-active");
-        }
+// 黒鍵をタッチしたときの関数
+for(let i=0; i<15; i++) {
+  blackKey[i].addEventListener("touchstart",function(){
+    console.log("black")
+
+    const scale = scale_Array[blackKey_Array[i]];
+    if(scale) {
+      if(presskey[scale] != true) {
+        presskey[scale] = true;
+        play(scale)
+        document.getElementById(scale).classList.add("blackKey-active");
       }
-    });
-  }
+    }
+  });
+}
 
-  // 白鍵でマウスが離れたときの関数
-  for(let i=0; i<22; i++) {
-    whiteKey[i].addEventListener("mouseup",function(){
-      const scale = scale_Array[whiteKey_Array[i]];
-      if(scale) {
-        if(mousekey[scale]) {
-          mousekey[scale] = false;
-          document.getElementById(scale).classList.remove("whiteKey-active");
-          audio[scale] = false;
-        }
+// 黒鍵から離れたときの関数
+for(let i=0; i<15; i++) {
+  blackKey[i].addEventListener("touchend",function(){
+    const scale = scale_Array[blackKey_Array[i]];
+    if(scale) {
+      if(presskey[scale]) {
+        presskey[scale] = false;
+        document.getElementById(scale).classList.remove("blackKey-active");
+        audio[scale] = false;
       }
-    });
-  }
+    }
+  });
+}
 
-  // 黒鍵をマウスで押したときの関数
-  const blackKey = document.querySelectorAll(".blackKey");
-  for(let i=0; i<15; i++) {
-    blackKey[i].addEventListener("mousedown",function(){
-      console.log("black")
-
-      const scale = scale_Array[blackKey_Array[i]];
-      if(scale) {
-        if(mousekey[scale] != true) {
-          mousekey[scale] = true;
-          play(scale)
-          document.getElementById(scale).classList.add("blackKey-active");
-        }
+// キーで押したときの関数
+document.onkeydown = function(event) {
+  const scale = scale_Array[event.key];
+  if(scale) {
+    if(presskey[scale] != true) {
+      presskey[scale] = true;
+      play(scale)
+  
+      if(scale.length==2) {
+        document.getElementById(scale).classList.add("whiteKey-active");
       }
-    });
-  }
-
-  // 黒鍵でマウスが離れたときの関数
-  for(let i=0; i<15; i++) {
-    blackKey[i].addEventListener("mouseup",function(){
-      const scale = scale_Array[blackKey_Array[i]];
-      if(scale) {
-        if(mousekey[scale]) {
-          mousekey[scale] = false;
-          document.getElementById(scale).classList.remove("blackKey-active");
-          audio[scale] = false;
-        }
+      else {
+        document.getElementById(scale).classList.add("blackKey-active");
       }
-    });
+    }
   }
+}
 
+// キーで離れたの関数
+document.onkeyup = function(event) {
+  const scale = scale_Array[event.key];
+  if(scale) {
+    if(presskey[scale]) {
+      presskey[scale] = false;
+      pause(scale)
+  
+      if(scale.length == 2) {
+        document.getElementById(scale).classList.remove("whiteKey-active");
+      }
+      else {
+        document.getElementById(scale).classList.remove("blackKey-active");
+      }
+    }
+  }  
+}
+
+// 白鍵をマウスで押したときの関数
+for(let i=0; i<22; i++) {
+  whiteKey[i].addEventListener("mousedown",function(){
+    const scale = scale_Array[whiteKey_Array[i]];
+    if(scale) {
+      if(mousekey[scale] != true) {
+        mousekey[scale] = true;
+        play(scale)
+        document.getElementById(scale).classList.add("whiteKey-active");
+      }
+    }
+  });
+}
+
+// 白鍵でマウスが離れたときの関数
+for(let i=0; i<22; i++) {
+  whiteKey[i].addEventListener("mouseup",function(){
+    const scale = scale_Array[whiteKey_Array[i]];
+    if(scale) {
+      if(mousekey[scale]) {
+        mousekey[scale] = false;
+        document.getElementById(scale).classList.remove("whiteKey-active");
+        audio[scale] = false;
+      }
+    }
+  });
+}
+
+// 黒鍵をマウスで押したときの関数
+for(let i=0; i<15; i++) {
+  blackKey[i].addEventListener("mousedown",function(){
+    console.log("black")
+
+    const scale = scale_Array[blackKey_Array[i]];
+    if(scale) {
+      if(mousekey[scale] != true) {
+        mousekey[scale] = true;
+        play(scale)
+        document.getElementById(scale).classList.add("blackKey-active");
+      }
+    }
+  });
+}
+
+// 黒鍵でマウスが離れたときの関数
+for(let i=0; i<15; i++) {
+  blackKey[i].addEventListener("mouseup",function(){
+    const scale = scale_Array[blackKey_Array[i]];
+    if(scale) {
+      if(mousekey[scale]) {
+        mousekey[scale] = false;
+        document.getElementById(scale).classList.remove("blackKey-active");
+        audio[scale] = false;
+      }
+    }
+  });
 }
 
 //ピアノの音を流す関数
