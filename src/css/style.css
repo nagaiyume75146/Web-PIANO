@@ -13,8 +13,7 @@
 :root {
     --height: 0;
 
-    --height-block: calc( calc( var(--height) / 2 ) - 6px );
-    --size-icon: calc( calc( calc( var(--height) - 6px ) / 2 ) * calc( 50 / 177 ) ); /*50px*/
+    --height-block: calc( calc( 100% / 2 ) - 6px );
 
     --height-keyboard: 0;
 
@@ -38,6 +37,11 @@ html {
 body {
     margin: 0;
     overflow: hidden;
+}
+
+.piano {
+    width: 100vw;
+    height: var(--height);
 }
 
 .top {
@@ -72,8 +76,8 @@ body {
 }
 
 .icon {
-    width: var(--size-icon);
-    height: var(--size-icon);
+    height: calc( 100% / 2 );
+    aspect-ratio: 1;
     cursor: pointer;
 }
 
