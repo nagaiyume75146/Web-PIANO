@@ -14,7 +14,7 @@ body {
 
 .top {
     width: 100%;
-    height: calc( calc( 100% / 10 ) * 2 );
+    height: calc( calc( calc( 100% / 10 ) * 2 ) - 6px );
     border-right: solid 2px #333;
     border-bottom: solid 2px #333;
     border-left: solid 2px #333;
@@ -29,7 +29,7 @@ body {
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: calc( calc( 100% / 10 ) * 8 );
+    height: calc( calc( calc( 100% / 10 ) * 8 ) - 6px );
     border-right: solid 2px #333;
     border-bottom: solid 2px #333;
     border-left: solid 2px #333;
