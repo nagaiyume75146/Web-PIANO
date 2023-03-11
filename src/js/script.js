@@ -126,8 +126,8 @@ for(let i=0; i<22; i++) {
   whiteKey[i].addEventListener("touchstart",function(){
     const scale = scale_Array[whiteKey_Array[i]];
     if(scale) {
-      if(presskey[scale] != true) {
-        presskey[scale] = true;
+      if(touchkey[scale] != true) {
+        touchkey[scale] = true;
         play(scale)
         document.getElementById(scale).classList.add("whiteKey-active");
       }
@@ -140,8 +140,8 @@ for(let i=0; i<22; i++) {
   whiteKey[i].addEventListener("touchend",function(){
     const scale = scale_Array[whiteKey_Array[i]];
     if(scale) {
-      if(presskey[scale]) {
-        presskey[scale] = false;
+      if(touchkey[scale]) {
+        touchkey[scale] = false;
         document.getElementById(scale).classList.remove("whiteKey-active");
         audio[scale] = false;
       }
@@ -156,8 +156,8 @@ for(let i=0; i<15; i++) {
 
     const scale = scale_Array[blackKey_Array[i]];
     if(scale) {
-      if(presskey[scale] != true) {
-        presskey[scale] = true;
+      if(touchkey[scale] != true) {
+        touchkey[scale] = true;
         play(scale)
         document.getElementById(scale).classList.add("blackKey-active");
       }
@@ -170,8 +170,8 @@ for(let i=0; i<15; i++) {
   blackKey[i].addEventListener("touchend",function(){
     const scale = scale_Array[blackKey_Array[i]];
     if(scale) {
-      if(presskey[scale]) {
-        presskey[scale] = false;
+      if(touchkey[scale]) {
+        touchkey[scale] = false;
         document.getElementById(scale).classList.remove("blackKey-active");
         audio[scale] = false;
       }
