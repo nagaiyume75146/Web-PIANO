@@ -65,9 +65,10 @@ function orientCheck(){
 
     if (orientation === 0) {
         alert("横画面を推奨しています。")
-    } else {
-        console.log();
-  }
+        const root = document.querySelector(':root');
+        root.style.setProperty("--font-size", "60px");
+        root.style.setProperty("--size-icon", "20px");
+    }
 };
 
 let touchkey = {}; // タッチしたキーを保存する配列
