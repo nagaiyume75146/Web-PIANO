@@ -70,6 +70,7 @@ window.addEventListener("resize",function () {
 
 let presskey = {}; // 押したキーを保存する配列
 let mousekey = {}; // マウスで押したキーを保存する配列
+let touchkey = {}; // タッチしたキーを保存する配列
 let audio = {}; // 音を保存する配列
 
 // 押すキーの配列
