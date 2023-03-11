@@ -192,10 +192,3 @@ function play(scale){
   audio[scale].volume = 50 * 0.01;
   audio[scale].play()
 }
-
-//ピアノの音を止める関数
-function pause(scale){
-  audio[scale].pause()
-  audio[scale].currentTime = 0;
-  audio[scale] = false;
-}
