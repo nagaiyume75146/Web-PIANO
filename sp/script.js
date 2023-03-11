@@ -26,7 +26,13 @@ window.addEventListener("load", function() {
     root.style.setProperty("--font-size2", span_height);
     root.style.setProperty("--size-icon", size_icon);
 
-    orientCheck()
+    const orientation = window.orientation;
+    if (orientation === 0) {
+        const root = document.querySelector(':root');
+        root.style.setProperty("--font-size", "60px");
+        root.style.setProperty("--size-icon", "20px");
+        alert("横画面を推奨しています")
+    }
 })
 
 window.addEventListener("resize", function() {
@@ -56,20 +62,13 @@ window.addEventListener("resize", function() {
     root.style.setProperty("--font-size2", span_height);
     root.style.setProperty("--size-icon", size_icon);
 
-    orientCheck()
-})
-
-function orientCheck(){
-    //画面の向きを 0,90,180,-90 のいずれかで取得
-    var orientation = window.orientation;
-
+    const orientation = window.orientation;
     if (orientation === 0) {
-        alert("横画面を推奨しています。")
         const root = document.querySelector(':root');
         root.style.setProperty("--font-size", "60px");
         root.style.setProperty("--size-icon", "20px");
     }
-};
+})
 
 let touchkey = {}; // タッチしたキーを保存する配列
 let audio = {}; // 音を保存する配列
