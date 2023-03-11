@@ -142,8 +142,8 @@ for(let i=0; i<22; i++) {
     if(scale) {
       if(touchkey[scale]) {
         touchkey[scale] = false;
+        pause(scale)
         document.getElementById(scale).classList.remove("whiteKey-active");
-        audio[scale] = false;
       }
     }
   });
@@ -172,8 +172,8 @@ for(let i=0; i<15; i++) {
     if(scale) {
       if(touchkey[scale]) {
         touchkey[scale] = false;
+        pause(scale)
         document.getElementById(scale).classList.remove("blackKey-active");
-        audio[scale] = false;
       }
     }
   });
