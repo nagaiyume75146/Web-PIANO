@@ -7,11 +7,6 @@ body {
     margin: 0;
 }
 
-.piano {
-    border: solid gray 10px;
-    box-sizing: border-box;
-}
-
 .top {
     width: 100%;
     height: calc( calc( calc( 100% / 10 ) * 2 ) - 6px );
@@ -28,6 +23,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 6px;
     width: 100%;
     height: calc( calc( calc( 100% / 10 ) * 8 ) - 6px );
     border-right: solid 2px #333;
