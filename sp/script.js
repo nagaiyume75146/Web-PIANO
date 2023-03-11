@@ -17,11 +17,14 @@ window.addEventListener("load", function() {
     }
 
     let span_height = document.getElementsByTagName("span")[0].clientHeight;
-    console.log(span_height)
     span_height = String(span_height / 2) + "px";
-    console.log(span_height)
+    let size_icon = document.getElementsByClassName("top")[0].clientHeight;
+    size_icon = String(size_icon * ( 50 / 69 )) + "px";
+    let top_height = document.getElementsByClassName("top")[0].clientHeight + "px";
     const root = document.querySelector(':root');
+    root.style.setProperty("--font-size", top_height);
     root.style.setProperty("--font-size2", span_height);
+    root.style.setProperty("--size-icon", size_icon);
 })
 
 window.addEventListener("resize", function() {
@@ -43,8 +46,13 @@ window.addEventListener("resize", function() {
 
     let span_height = document.getElementsByTagName("span")[0].clientHeight;
     span_height = String(span_height / 2) + "px";
+    let size_icon = document.getElementsByClassName("top")[0].clientHeight;
+    size_icon = String(size_icon * ( 50 / 69 )) + "px";
+    let top_height = document.getElementsByClassName("top")[0].clientHeight + "px";
     const root = document.querySelector(':root');
+    root.style.setProperty("--font-size", top_height);
     root.style.setProperty("--font-size2", span_height);
+    root.style.setProperty("--size-icon", size_icon);
 })
 
 let touchkey = {}; // タッチしたキーを保存する配列
