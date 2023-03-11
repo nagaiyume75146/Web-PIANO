@@ -11,6 +11,13 @@
   ・boolean系(true/false):is〇〇(受動態)
 */
 
+// スマホ用のページに遷移する
+function isSmartPhone() {
+  if (window.matchMedia && window.matchMedia('(max-device-width: 640px)').matches) {
+    location.href = "https://nagaiyume75146.github.io/Web-PIANO/sp/";
+  }
+}
+
 // ロードしたときに画面を合わせる
 window.addEventListener("load",function () {
   const root = document.querySelector(':root');
