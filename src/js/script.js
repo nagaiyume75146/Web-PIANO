@@ -142,7 +142,7 @@ for(let i=0; i<22; i++) {
     if(scale) {
       if(touchkey[scale]) {
         touchkey[scale] = false;
-        pause(scale)
+        audio[scale] = false;
         document.getElementById(scale).classList.remove("whiteKey-active");
       }
     }
@@ -172,7 +172,7 @@ for(let i=0; i<15; i++) {
     if(scale) {
       if(touchkey[scale]) {
         touchkey[scale] = false;
-        pause(scale)
+        audio[scale] = false;
         document.getElementById(scale).classList.remove("blackKey-active");
       }
     }
