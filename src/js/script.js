@@ -14,7 +14,6 @@
 // スマホ用のページに遷移する
 if (window.matchMedia && window.matchMedia('(max-device-width: 640px)').matches) {
   location.href = "https://nagaiyume75146.github.io/Web-PIANO/sp/";
-  alert("スマホです")
 }
 
 // ロードしたときに画面を合わせる
