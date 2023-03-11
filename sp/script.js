@@ -47,8 +47,6 @@ window.addEventListener("resize", function() {
     root.style.setProperty("--font-size2", span_height);
 })
 
-let presskey = {}; // 押したキーを保存する配列
-let mousekey = {}; // マウスで押したキーを保存する配列
 let touchkey = {}; // タッチしたキーを保存する配列
 let audio = {}; // 音を保存する配列
 
