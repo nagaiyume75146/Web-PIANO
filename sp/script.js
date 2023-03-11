@@ -130,7 +130,7 @@ whiteKey[i].addEventListener("touchend",function(){
     const scale = scale_Array[whiteKey_Array[i]];
     if(scale) {
     if(touchkey[scale]) {
-        presskey[scale] = false;
+        touchkey[scale] = false;
         document.getElementById(scale).classList.remove("whiteKey-active");
         audio[scale] = false;
     }
